@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>搜寻结果</title>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.js" ></script> 
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-ui.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-validate.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/head.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/common.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Search/search.js"></script>
+<link href="__PUBLIC__/Css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/Search/search.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/Page/page.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+	
+	<include file="Public:head" />
+	
+	<input type="hidden" name="username" value="<?php echo $_SESSION['username'] ?>" />
+	<input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>" />
+	
+	<div id="mainbody">
+		<table class="searched" >
+			<tr>
+				<th width=10%>编号</th>
+				<th width=45%>文章标题</th>
+				<th width=10%>作者</th>
+				<th width=10%>类型</th>
+				<th width=15%>发布时间</th>
+				<th width=10%>操作</th>
+			</tr>
+			<volist name="result" id="ro">
+				<input type="hidden" name="article_id" value="{$ro['id']}" />
+				<tr>
+					<td>{$i}.</td>
+					<td><a href="/blog/index.php/Home/Article/article?id={$ro['id']}" class="Goto">{$ro['title']}</a></td>
+					<td><a href="/blog/index.php/Home/Index/index?id={$ro['userid']}" class="Goto">{$ro['username']}</a></td>
+					<td>
+						<if condition="$ro['kind'] eq 1">
+							情感人生							
+						<elseif condition="$ro['kind'] eq 2" />
+							励志哲理
+						<elseif condition="$ro['kind'] eq 3"/>
+							经典美文
+						<else/>
+							伤感日记
+						</if>
+					</td>
+					<td>{$ro['release_time']}</td>
+					<td>
+						<a href="/blog/index.php/Home/Article/article?id={$ro['id']}"><button class="read">查看</button></a>
+					</td>
+				</tr>
+			</volist>
+		</table>
+		
+		<div class="pagination">{$page}</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人中心</title>
+<link href="__PUBLIC__/Css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/jquery.Jcrop.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/Userinfo/userinfo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.js" ></script> 
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-ui.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.Jcrop.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/head.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/common.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/leftnav.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Userinfo/userinfo.js"></script>
+</head>
+<body>
+	
+	<include file="Public:head" />
+	
+	<div id="mainbody">
+		<include file="Public:leftnav" />
+		
+		<div id="show">
+			<div id="message">
+				<ul>
+					<li><a href="#userinfo">个人资料</a></li>
+					<li><a href="#usersign">个人签名</a></li>
+					<li><a href="#Pic">修改头像</a></li>
+				</ul>
+				
+				<div id="userinfo">
+					<form action="__URL__/modifyinfo" method="POST" name="modifyinfo" />
+						<div class="poname">
+							<img src="{$list['pic']}" />
+							<label class="lablesize lablepic"></label>
+							<span>{$list['username']}</span>
+						</div>
+						<div class="age">							
+							<label for="age" class="lablesize agepic" ></label>
+							<input type="text" name="age" placeholder="年龄" value="{$list['age']}" tabindex="1"  onFocus="this.value=''" title="请填写您的年龄"/>
+						</div>
+						<div class="sex">
+							<img style="width:23px;height:23px;position:absolute;top:220px;left:31px;" src="__PUBLIC__/Image/sex.png" />
+							<span>性别</span>
+							<if condition="$list['sex'] eq 1" >
+								<label for="man">
+									<img style="width:20px;height:20px;position:absolute;top:5px;left:5px;" src="__PUBLIC__/Image/man.png" />
+									男士
+								</label>
+								<input type="radio" name="sex" value="1" id="man" checked="checked" tabindex="2" />
+								<label for="women">
+									<img style="width:20px;height:20px;position:absolute;top:5px;left:5px;" src="__PUBLIC__/Image/women.png" />
+									女士
+								</label>
+								<input type="radio" name="sex" value="0" tabindex="3" id="women"  />
+							<else/>
+								<label for="man">
+									<img style="width:20px;height:20px;position:absolute;top:5px;left:5px;" src="__PUBLIC__/Image/man.png" />
+									男士
+								</label>
+								<input type="radio" name="sex" value="1" id="man"  tabindex="2" />
+								<label for="women">
+									<img style="width:20px;height:20px;position:absolute;top:5px;left:5px;" src="__PUBLIC__/Image/women.png" />
+									女士
+								</label>
+								<input type="radio" name="sex" value="0" id="women" checked="checked" tabindex="3"  />
+							</if>
+						</div>
+						<div class="birthday">
+							<label for="birthday" class="lablesize birthdaypic" ></label>
+							<input type="text" name="birthday" placeholder="生日" title="请选择您的生日" value="{$list['birthday']}" tabindex="4" />
+						</div>
+						<div class="mail">
+							<label for="mail" class="lablesize mailpic" ></label>
+							<input type="text" name="mail" placeholder="邮箱" title="请填写您的邮箱" value="{$list['mail']}" tabindex="5" />
+						</div>
+						<div class="phonenum">
+							<label for="phonenum" class="lablesize phonepic" ></label>
+							<input type="text" name="phonenum" placeholder="电话号码" title="请填写您的电话号码" value="{$list['phonenum']}" tabindex="6" />
+						</div>
+						<div class="btn-operation">
+							<button type="button" tabindex="7" class="btn btn-modify">修改</button>
+							<button type="button" tabindex="8" class="btn btn-cancle">取消</button>
+						</div>
+					</form>
+				</div>
+				
+				
+				<div id="usersign">
+					<form action="__URL__/modifysign" method="POST" name="modifysign" />
+						<div class="desclabel">
+							<label for="desc" class="Lsize descpic" ></label>
+							<span>个人描述</span>
+						</div>
+						<div class="userdesc">
+							<textarea name="desc" placeholder="个人描述" title="介绍出真实的你(＾－＾)" maxlength="60" tabindex="1">{$list['desc']}</textarea>
+						</div>
+						
+						<div class="signlabel">
+							<label for="sign" class="Lsize signpic" ></label>
+							<span>个人签名</span>
+						</div>
+						<div class="sign">
+							<textarea name="sign" placeholder="个人签名" title="写下你喜欢的话语(＾－＾)" maxlength="100" tabindex="2">{$list['sign']}</textarea>
+						</div>
+						<div class="btn-operation">
+							<button type="button" tabindex="3" class="btn btn-signmodify">修改</button>
+							<button type="button" tabindex="4" class="btn btn-signcancle">取消</button>
+						</div>
+					</form>
+				</div>
+				
+				
+				<div id="Pic">
+					<form action="__URL__/upload" method="POST" class="myform"  enctype="multipart/form-data">
+						<div class="now-Pic">
+							<label class="now-Pic-label"></label>
+							<span>{$list['username']}</span>
+							<img src="{$list['pic']}" />
+						</div>	
+						<div class="upload">
+							<span>更改我的头像</span>
+							<input type="file" name="pic" class="hidden" />
+						</div>
+						<input type="hidden" id="rx" name="rx" />
+						<input type="hidden" id="ry" name="ry" />
+						<input type="hidden" id="rx1" name="rx1" />
+						<input type="hidden" id="ry1" name="ry1" />
+						<div class="Pre-box">
+							<span>预览</span>
+							<img src=""  id="pre-pic" />
+							<button type="button" class="submit" name="button">更新头像</button>
+						</div>	
+					</form>
+				</div>
+	
+			</div>
+			
+		</div>
+	</div>
+	
+
+
+</body>
+</html>

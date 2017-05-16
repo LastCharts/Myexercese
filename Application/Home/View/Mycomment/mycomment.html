@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的评论</title>
+<link href="__PUBLIC__/Css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/Page/page.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/Mycomment/mycomment.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.js" ></script> 
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-ui.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/head.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/common.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/leftnav.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Mycomment/mycomment.js" ></script>
+</head>
+<body>
+	
+	<include file="Public:head" />
+	
+	<input type="hidden" name="username" value="<?php echo $_SESSION['username'] ?>" />
+	<input type="hidden" name="userid" value="<?php echo $_SESSION['id'] ?>" />
+	
+	<div id="mainbody">
+		<include file="Public:leftnav" />
+			
+		<div id="list">
+			<ul>
+				<li><a href="#mycomment">我的评论</a></li>
+				<li><a href="#myreply">我的回复</a></li>
+			</ul>
+		
+			<div id="mycomment">
+				<div class="commentlist">
+					<volist name="result" id="vo" empty="你还没有发表过评论哦(￣︶￣)">
+						<div id="info-show">
+							<input type="hidden" name="comment-id" value="{$vo['id']}" />
+							<input type="hidden" name="article_id" value="{$vo['article_id']}" />
+							<div id="comment-author">
+								<img src="{$vo['pic']}" />
+								<p class="username">{$vo['username']}</p>
+							</div>
+							<div id="comment-body">
+								<span>内容：</span>
+								<p class="comment-content">{$vo['cmt_content']}</p>
+								<div class="comment-footer">
+									<span class="Oh">#1　</span>
+									<span class="time">发表时间：{$vo['time']}</span>
+									<button class="Go cmt-go">去源文章</button>
+								</div>
+							</div>
+						</div>
+					</volist>
+				</div>	
+				<div class="pagination">{$page}</div>
+			</div>
+			
+			<div id="myreply">
+				<div class="commentlist">
+					<volist name="data" id="ro" empty="你还没有回复过别人呢(￣︶￣)">
+						<div id="info-show">
+							<input type="hidden" name="comment-id" value="{$vo['id']}" />
+							<input type="hidden" name="article_id" value="{$vo['article_id']}" />
+							<div id="comment-author">
+								<img src="{$ro['reply_pic']}" />
+								<p class="username">{$ro['replyname']}</p>
+							</div>
+							<div id="comment-body">
+								<span>内容：</span>
+								<p class="comment-content">
+									回复<img class='be_replypic' src="{$ro['be_replypic']}" />{$ro['be_replyname']}
+									: {$ro['content']}
+								</p>
+								<div class="comment-footer">
+									<span class="Oh">#1　</span>
+									<span class="time">发表时间：{$ro['time']}</span>
+									<input type="hidden" value="{$ro['comment_id']}" />
+									<button class="Go reply_go">去源文章</button>
+								</div>
+							</div>
+						</div>
+					</volist>
+				</div>	
+				<div class="pagination">{$pagelist}</div>
+			</div>
+		</div>
+
+		<div id="going">
+			跳转中...
+		</div>
+		<div id="default-go">
+			跳转失败(；′⌒`)
+		</div>
+	</div>
+		
+</body>
+</html>

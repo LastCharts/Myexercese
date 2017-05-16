@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>发表内容</title>
+
+<link href="__PUBLIC__/Css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/NewMoments/newmoments.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/jquery.sinaEmotion.css" />
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.js" ></script> 
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-ui.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/head.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/NewMoments/jquery.sinaEmotion.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/common.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/NewMoments/newmoments.js"></script>
+</head>
+<body>
+	
+	<include file="Public:head" />
+	
+	<input type="hidden" name="username" value="<?php echo $_SESSION['username'] ?>" />
+	<input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>" />
+	
+	<div id="mainbody">
+		<form action="__URL__/addmoments" method="POST" name="mymoment" enctype="multipart/form-data" >
+			<input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>" />
+			<div class="left">
+				<div class="content-text">
+					<textarea name="contents" ></textarea>
+				</div>
+				
+				<div class="picture">
+					<div class="pic-box">
+						<input type="file" name="pic[]" />
+					</div>
+					<div class="pic-box">
+						<input type="file" name="pic[]" />
+					</div>
+					<div class="pic-box">
+						<input type="file" name="pic[]" />
+					</div>
+					<div class="pic-box">
+						<input type="file" name="pic[]" />
+					</div>
+					<div class="pic-box">
+						<input type="file" name="pic[]" />
+					</div>
+					<div class="pic-box">
+						<input type="file" name="pic[]" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="right">
+				<div class="icon-face">
+					<span class="emoji">😚</span>
+				</div>
+				
+				<div class="buttons">
+					<button type="button" class="send">发送</button>
+					<button type="button" class="reset">重置</button>
+				</div>
+				
+			</div>
+		</form>
+	</div>
+	
+	<div id="mmt-send">
+		发送中...
+	</div>
+	
+
+
+</body>
+</html>

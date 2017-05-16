@@ -1,0 +1,1853 @@
+[ 2017-04-29T00:00:04+08:00 ] ::1 /blog/index.php/Home/Index/index?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:1.2774s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_article` WHERE ( author_id=5 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `thinkphp_article` WHERE ( author_id=5 ) ORDER BY release_time desc LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0165s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0015s ]
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\blog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT * FROM `thinkphp_article` ORDER BY release_time desc LIMIT 10   [ RunTime:0.0058s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000257s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000527s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000982s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001014s ]
+
+[ 2017-04-29T00:00:04+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001007s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001339s ]
+
+[ 2017-04-29T00:00:04+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001358s ]
+
+[ 2017-04-29T00:00:11+08:00 ] ::1 /blog/index.php/Home/Friend/sendaddrequest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+SQL: SHOW COLUMNS FROM `thinkphp_friend` [ RunTime:0.2422s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_friend` WHERE `uid` = 1 AND `fid` = 5 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `thinkphp_addfriend` WHERE `send_id` = 1 AND `receive_id` = 5 LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2017-04-29T00:00:28+08:00 ] ::1 /blog/index.php/Home/Friend/sendaddrequest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001449s ]
+SQL: SHOW COLUMNS FROM `thinkphp_friend` [ RunTime:0.0301s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_friend` WHERE `uid` = 5 AND `fid` = 1 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0153s ]
+SQL: SELECT * FROM `thinkphp_addfriend` WHERE `send_id` = 5 AND `receive_id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2017-04-29T00:00:55+08:00 ] ::1 /blog/index.php/Home/Message/message?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000932s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0179s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0643s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '1' AND addfriend.state = '0'  [ RunTime:0.0018s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=1 AND state>0 )  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0222s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0249s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '1' AND favorite.is_update = '1'  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000368s ]
+NOTIC: [8] Undefined variable: result1 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 105 行.
+NOTIC: [8] Undefined variable: result2 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034796s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001356s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001738s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001591s ]
+
+[ 2017-04-29T00:00:55+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002091s ]
+
+[ 2017-04-29T00:00:55+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002240s ]
+
+[ 2017-04-29T00:00:57+08:00 ] ::1 /blog/index.php/Home/Message/message?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.1004s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0123s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '5' AND addfriend.state = '0'  [ RunTime:0.0009s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=5 AND state>0 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0136s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '5' AND favorite.is_update = '1'  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined variable: result1 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 105 行.
+NOTIC: [8] Undefined variable: result2 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016627s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000760s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000906s ]
+
+[ 2017-04-29T00:00:58+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004037s ]
+
+[ 2017-04-29T00:00:58+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001523s ]
+
+[ 2017-04-29T00:01:32+08:00 ] ::1 /blog/index.php/Home/Friend/addfriend
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000915s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001317s ]
+SQL: SHOW COLUMNS FROM `thinkphp_friend` [ RunTime:4.5280s ]
+SQL: SELECT * FROM `thinkphp_friend` WHERE `uid` = 1 AND `fid` = 5 LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `thinkphp_friend` (`uid`,`fid`) VALUES ('1','5') [ RunTime:0.9994s ]
+SQL: INSERT INTO `thinkphp_friend` (`uid`,`fid`) VALUES ('5','1') [ RunTime:0.5051s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `thinkphp_addfriend` WHERE `send_id` = 5 AND `receive_id` = 1 LIMIT 1   [ RunTime:0.0012s ]
+SQL: UPDATE `thinkphp_addfriend` SET `send_id`='5',`receive_id`='1',`state`='1' WHERE `id` = 11 [ RunTime:2.6124s ]
+
+[ 2017-04-29T00:03:48+08:00 ] ::1 /blog/index.php/Home/Friend/addfriend
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001539s ]
+SQL: SHOW COLUMNS FROM `thinkphp_friend` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `thinkphp_friend` WHERE `uid` = 5 AND `fid` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0088s ]
+SQL: DELETE FROM `thinkphp_addfriend` WHERE `send_id` = 1 AND `receive_id` = 5 [ RunTime:3.8088s ]
+
+[ 2017-04-29T00:04:07+08:00 ] ::1 /blog/index.php/Home/Message/message?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001140s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0108s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '5' AND addfriend.state = '0'  [ RunTime:0.0009s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=5 AND state>0 )  [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0105s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '5' AND favorite.is_update = '1'  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined variable: result G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 88 行.
+NOTIC: [8] Undefined variable: result2 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000897s ]
+
+[ 2017-04-29T00:04:07+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001228s ]
+
+[ 2017-04-29T00:04:07+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+
+[ 2017-04-29T00:04:30+08:00 ] ::1 /blog/index.php/Home/Message/deleteMess
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0105s ]
+SQL: DELETE FROM `thinkphp_addfriend` WHERE `send_id` = 5 AND `receive_id` = 1 AND `state` = 1 [ RunTime:0.9874s ]
+
+[ 2017-04-29T00:16:05+08:00 ] ::1 /blog/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001028s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0264s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `thinkphp_user` SET `username`='ainio',`password`='123456',`sex`='1',`age`=NULL,`birthday`='0',`pic`='/blog/Public/Image/first-head.png',`mail`=NULL,`phonenum`=NULL,`desc`='这个人很懒。什么都没留下...',`sign`='这家伙没留下什么信息...',`online`='0',`reg_time`='2017-03-07' WHERE `id` = 5 [ RunTime:0.1525s ]
+NOTIC: [2] session_destroy() [<a href='function.session-destroy'>function.session-destroy</a>]: Session object destruction failed G:\wamp\www\blog\Application\Home\Controller\LoginController.class.php 第 51 行.
+
+[ 2017-04-29T00:16:07+08:00 ] ::1 /blog/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0014s ]
+SQL: UPDATE `thinkphp_user` SET `username`='ainio',`password`='123456',`sex`='1',`age`=NULL,`birthday`='0',`pic`='/blog/Public/Image/first-head.png',`mail`=NULL,`phonenum`=NULL,`desc`='这个人很懒。什么都没留下...',`sign`='这家伙没留下什么信息...',`online`='0',`reg_time`='2017-03-07' WHERE `id` = 5 [ RunTime:0.3242s ]
+NOTIC: [2] session_destroy() [<a href='function.session-destroy'>function.session-destroy</a>]: Session object destruction failed G:\wamp\www\blog\Application\Home\Controller\LoginController.class.php 第 51 行.
+
+[ 2017-04-29T00:16:08+08:00 ] ::1 /blog/index.php/Home/Message/message?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0121s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '5' AND addfriend.state = '0'  [ RunTime:0.0010s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=5 AND state>0 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0098s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0098s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '5' AND favorite.is_update = '1'  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+NOTIC: [8] Undefined variable: result G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 88 行.
+NOTIC: [8] Undefined variable: result1 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 105 行.
+NOTIC: [8] Undefined variable: result2 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000838s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000934s ]
+
+[ 2017-04-29T00:16:09+08:00 ] ::1 /blog/index.php/Home/Message/message?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001133s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0231s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0146s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '5' AND addfriend.state = '0'  [ RunTime:0.0012s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=5 AND state>0 )  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0152s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '5' AND favorite.is_update = '1'  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined variable: result G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 88 行.
+NOTIC: [8] Undefined variable: result1 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 105 行.
+NOTIC: [8] Undefined variable: result2 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017677s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000860s ]
+
+[ 2017-04-29T00:16:09+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001961s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002189s ]
+
+[ 2017-04-29T00:16:09+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001179s ]
+
+[ 2017-04-29T00:16:14+08:00 ] ::1 /blog/index.php/Home/Message/message?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0265s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0160s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '5' AND addfriend.state = '0'  [ RunTime:0.0011s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=5 AND state>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0138s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '5' AND favorite.is_update = '1'  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000324s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000481s ]
+NOTIC: [8] Undefined variable: result G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 88 行.
+NOTIC: [8] Undefined variable: result1 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 105 行.
+NOTIC: [8] Undefined variable: result2 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017932s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018044s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001229s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001378s ]
+
+[ 2017-04-29T00:16:14+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000993s ]
+
+[ 2017-04-29T00:16:14+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002097s ]
+
+[ 2017-04-29T00:16:18+08:00 ] ::1 /blog/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0266s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0011s ]
+SQL: UPDATE `thinkphp_user` SET `username`='ainio',`password`='123456',`sex`='1',`age`=NULL,`birthday`='0',`pic`='/blog/Public/Image/first-head.png',`mail`=NULL,`phonenum`=NULL,`desc`='这个人很懒。什么都没留下...',`sign`='这家伙没留下什么信息...',`online`='0',`reg_time`='2017-03-07' WHERE `id` = 5 [ RunTime:0.4501s ]
+
+[ 2017-04-29T00:16:19+08:00 ] ::1 /blog/index.php/Home/Message/message?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001216s ]
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\MessageController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0215s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0159s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = null AND addfriend.state = '0'  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\MessageController.class.php 第 21 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND state>0 )' at line 1
+ [ SQL语句 ] : SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id= AND state>0 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND state>0 )' at line 1
+ [ SQL语句 ] : SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id= AND state>0 ) 
+
+[ 2017-04-29T00:16:22+08:00 ] ::1 /blog/index.php/Home/Message/message?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001145s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001273s ]
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\MessageController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0255s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0245s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = null AND addfriend.state = '0'  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\MessageController.class.php 第 21 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND state>0 )' at line 1
+ [ SQL语句 ] : SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id= AND state>0 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND state>0 )' at line 1
+ [ SQL语句 ] : SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id= AND state>0 ) 
+
+[ 2017-04-29T00:16:27+08:00 ] ::1 /blog/index.php/Home/Message/message
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003567s ]
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\MessageController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0117s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = null AND addfriend.state = '0'  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\MessageController.class.php 第 21 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND state>0 )' at line 1
+ [ SQL语句 ] : SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id= AND state>0 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND state>0 )' at line 1
+ [ SQL语句 ] : SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id= AND state>0 ) 
+
+[ 2017-04-29T00:16:59+08:00 ] ::1 /blog/index.php/Home/Message/message%EF%BC%9Fid5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000958s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000699s ]
+
+[ 2017-04-29T00:17:02+08:00 ] ::1 /blog/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000475s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.102419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002537s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002958s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003411s ]
+
+[ 2017-04-29T00:17:02+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000857s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001449s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001297s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001476s ]
+
+[ 2017-04-29T00:17:23+08:00 ] ::1 /blog/index.php/Home/Public/Verify?0.7628980983625868
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000833s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2017-04-29T00:17:29+08:00 ] ::1 /blog/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001868s ]
+NOTIC: [8] Undefined index: model G:\wamp\www\blog\Application\Home\Controller\LoginController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE `username` = 'Chalotte' AND `password` = '123123' LIMIT 1   [ RunTime:0.0009s ]
+SQL: UPDATE `thinkphp_user` SET `username`='Chalotte',`password`='123123',`sex`='0',`age`=NULL,`birthday`='0',`pic`='/blog/Public/Image/Pic/Charlotte/2017-04-25/58ff7223ea04a.jpg',`mail`=NULL,`phonenum`=NULL,`desc`='这个人很懒。什么都没留下...',`sign`='这家伙没留下什么信息...',`online`='1',`reg_time`='' WHERE `id` = 2 [ RunTime:0.2629s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000443s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001820s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002788s ]
+
+[ 2017-04-29T00:17:31+08:00 ] ::1 /blog/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001087s ]
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\IndexController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0283s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_article` WHERE ( author_id=2 ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `thinkphp_article` WHERE ( author_id=2 ) ORDER BY release_time desc LIMIT 0,5   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0148s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\blog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT * FROM `thinkphp_article` ORDER BY release_time desc LIMIT 10   [ RunTime:0.0037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017153s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017288s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001008s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001108s ]
+
+[ 2017-04-29T00:17:31+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001582s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001898s ]
+
+[ 2017-04-29T00:17:31+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000959s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001721s ]
+
+[ 2017-04-29T00:18:04+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000920s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001767s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+NOTIC: [8] Undefined variable: M G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 111 行.
+
+[ 2017-04-29T00:18:35+08:00 ] ::1 /blog/index.php/Home/Myarticle/updatefa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002295s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+NOTIC: [8] Undefined variable: M G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 111 行.
+
+[ 2017-04-29T00:18:57+08:00 ] ::1 /blog/index.php/Home/Myarticle/show
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002629s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 96 行.
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0140s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `thinkphp_article` WHERE ( id= ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `thinkphp_article` WHERE ( id= ) LIMIT 1  
+
+[ 2017-04-29T00:20:07+08:00 ] ::1 /blog/index.php/Home/Myarticle/remindfavor
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000223s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001791s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+NOTIC: [8] Undefined variable: M G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 111 行.
+
+[ 2017-04-29T00:20:49+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001230s ]
+
+[ 2017-04-29T00:20:55+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001976s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000960s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001073s ]
+
+[ 2017-04-29T00:25:02+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000933s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0167s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002131s ]
+
+[ 2017-04-29T00:25:06+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001667s ]
+
+[ 2017-04-29T00:28:24+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001967s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001172s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001353s ]
+
+[ 2017-04-29T00:28:47+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0258s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000968s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001102s ]
+
+[ 2017-04-29T00:29:32+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000873s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0224s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto G:\wamp\www\blog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001775s ]
+
+[ 2017-04-29T00:30:03+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000947s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000965s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001076s ]
+
+[ 2017-04-29T00:30:07+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001190s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001134s ]
+
+[ 2017-04-29T00:31:42+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001762s ]
+
+[ 2017-04-29T00:31:55+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0008s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='3',`is_update`='1',`article_id`='4' WHERE `id` = 2 [ RunTime:0.2659s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='1',`is_update`='1',`article_id`='4' WHERE `id` = 8 [ RunTime:0.1661s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='5',`is_update`='1',`article_id`='4' WHERE `id` = 10 [ RunTime:0.3196s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='4',`is_update`='1',`article_id`='4' WHERE `id` = 11 [ RunTime:0.1875s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002220s ]
+
+[ 2017-04-29T00:32:02+08:00 ] ::1 /blog/index.php/Home/Myarticle/updateFa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0009s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='3',`is_update`='1',`article_id`='4' WHERE `id` = 2 [ RunTime:1.1192s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='1',`is_update`='1',`article_id`='4' WHERE `id` = 8 [ RunTime:0.2243s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='5',`is_update`='1',`article_id`='4' WHERE `id` = 10 [ RunTime:0.2562s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='4',`is_update`='1',`article_id`='4' WHERE `id` = 11 [ RunTime:0.2867s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002377s ]
+
+[ 2017-04-29T00:34:45+08:00 ] ::1 /blog/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\IndexController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0115s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_article` WHERE ( author_id=2 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `thinkphp_article` WHERE ( author_id=2 ) ORDER BY release_time desc LIMIT 0,5   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\blog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT * FROM `thinkphp_article` ORDER BY release_time desc LIMIT 10   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016029s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001177s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001341s ]
+
+[ 2017-04-29T00:34:45+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000865s ]
+
+[ 2017-04-29T00:34:45+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001392s ]
+
+[ 2017-04-29T00:34:54+08:00 ] ::1 /blog/index.php/Home/Favorite/favorite?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001560s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0155s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0142s ]
+SQL: SELECT COUNT(*) AS tp_count FROM thinkphp_favorite favorite LEFT JOIN thinkphp_user user ON favorite.lid=user.id WHERE favorite.uid = '2' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT favorite.id AS id,favorite.uid AS uid,user.username AS username,user.sex AS sex,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_user user ON favorite.lid=user.id WHERE favorite.uid = '2' ORDER BY favorite.id desc LIMIT 0,6   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018680s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018899s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001959s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002184s ]
+
+[ 2017-04-29T00:35:00+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001230s ]
+
+[ 2017-04-29T00:35:00+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002361s ]
+
+[ 2017-04-29T00:35:04+08:00 ] ::1 /blog/index.php/Home/Message/message?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0214s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0243s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '1' AND addfriend.state = '0'  [ RunTime:0.0016s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=1 AND state>0 )  [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0265s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '1' AND favorite.is_update = '1'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+NOTIC: [8] Undefined variable: result1 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001239s ]
+
+[ 2017-04-29T00:35:07+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001454s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2017-04-29T00:35:07+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001470s ]
+
+[ 2017-04-29T00:35:49+08:00 ] ::1 /blog/index.php/Home/Myarticle/myarticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001634s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0145s ]
+SQL: SELECT COUNT(*) AS tp_count FROM thinkphp_article article LEFT JOIN thinkphp_user user ON article.author_id=user.id WHERE article.author_id = '2' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT article.id AS id,article.title AS title,article.release_time AS release_time,article.author_id AS author_id,user.id AS userid,user.username AS username FROM thinkphp_article article LEFT JOIN thinkphp_user user ON article.author_id=user.id WHERE article.author_id = '2' ORDER BY article.release_time desc LIMIT 0,10   [ RunTime:1.0488s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000417s ]
+NOTIC: [8] Undefined index: kind G:\wamp\www\blog\Application\Runtime\Cache\Home\97cb5c65f7c513cfc6ffe3a31f757d03.php 第 108 行.
+NOTIC: [8] Undefined index: kind G:\wamp\www\blog\Application\Runtime\Cache\Home\97cb5c65f7c513cfc6ffe3a31f757d03.php 第 109 行.
+NOTIC: [8] Undefined index: kind G:\wamp\www\blog\Application\Runtime\Cache\Home\97cb5c65f7c513cfc6ffe3a31f757d03.php 第 111 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.627472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.627686s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001535s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001133s ]
+
+[ 2017-04-29T00:35:49+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001664s ]
+
+[ 2017-04-29T00:35:50+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001439s ]
+
+[ 2017-04-29T00:37:05+08:00 ] ::1 /blog/index.php/Home/Myarticle/newarticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001245s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given G:\wamp\www\blog\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0111s ]
+SQL: INSERT INTO `thinkphp_article` (`title`,`desc`,`kind`,`content`,`release_time`,`author_id`,`picture`) VALUES ('《春落的离伤》','昨天是春落，今天是夏起
+春落夏起的时分，一切仍在继续','3','<p><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">昨天是春落，今天是夏起</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">春落夏起的时分，一切仍在继续</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><a href=\"http://www.jj59.com/zti/taiyang/\" class=\"keywordlink\" style=\"border: 0px; margin: 0px; padding: 0px; text-decoration: none; color: rgb(51, 51, 51); outline: none; font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\">太阳</a><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">沿着时序，升起在夏到的岗上</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">春末的星月，也渐渐淡出夏的时光</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">绿的，蓝的，彩的依然而然</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">该笑的在笑，该哭的在哭</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">该叫的一样在袅袅声放</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">那些叶长花开，也都在幽幽出声</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">/</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">昨天的济南，似乎有一些离伤</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">那些在季期里还没能长全的枝叶</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">落下一份愧疚，想倾诉给夏情</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">渐渐，把脸阴沉了下来</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">渐渐，发出一串雷呜大吼</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">之后，又轻轻地泣出少微淅沥</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">整整一天，都没有阳光起来</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">/</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">昨天的南方，是否同样有着离伤</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">虽然，不会因春</span><a href=\"http://www.jj59.com/zti/se/\" class=\"keywordlink\" style=\"border: 0px; margin: 0px; padding: 0px; text-decoration: none; color: rgb(51, 51, 51); outline: none; font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\">色</a><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">未尽而内疚</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">然而，倘若真的阴下脸来</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">那一定也会抽泣，也会忧伤</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">忧伤在雨巷，忧伤在小桥柳岸</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">湿起青石板的念忆，潮润叶纷的眷恋</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">又将这一切，诉尽在绵绵的漪涟上</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">/</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">田间的油菜花，满山的映山红</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">以及那些烂漫的山野花</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">此刻，会不会因此而垂头丧气</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">叶波青涛，能否送上一路清芬</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">许些给，那些季节交割时分的伤情</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">/</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">山里的姑娘，捏着麻花辫的</span><a href=\"http://www.jj59.com/zti/sinian/\" class=\"keywordlink\" style=\"border: 0px; margin: 0px; padding: 0px; text-decoration: none; color: rgb(51, 51, 51); outline: none; font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\">思念</a><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">一定还会滞留在春山茶坡上</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">等在那些浣洗，炊烟，制茶的时光</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">村里的阿婆，一定还在堆满皱纹的脸下</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">穿针引线，追忆那份昔日煤油灯下的美好</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">可是她们，真的还不知道夏天已悄然来到</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">/</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">今日夏起，迫催着热的启程</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">夏起的启程，犹如准备远行寻觅热情的小伙</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">急急整理完一片春情，随同内心的执热</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">装进夏的季囊，摆出一副雄心勃勃的样子</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">然而，最后那份春宵落意的离伤</span><br style=\"border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);\"/><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; background-color: rgb(255, 255, 255);\">却被将要启程的初夏，遗忘在了昨晚的宵床</span></p>','2017-04-29 00:37:04','2','/blog/Public/Image/Article/2017-04-29/59036faf9b585.jpg') [ RunTime:0.3265s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE ( Lid=2 )  [ RunTime:0.0007s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='3',`is_update`='1',`article_id`='8' WHERE `id` = 2 [ RunTime:0.1104s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='1',`is_update`='1',`article_id`='8' WHERE `id` = 8 [ RunTime:0.1547s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='5',`is_update`='1',`article_id`='8' WHERE `id` = 10 [ RunTime:0.1438s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='4',`is_update`='1',`article_id`='8' WHERE `id` = 11 [ RunTime:0.1315s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001439s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001710s ]
+
+[ 2017-04-29T00:37:07+08:00 ] ::1 /blog/index.php/Home/Myarticle/myarticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+NOTIC: [2048] Declaration of Home\Controller\MyarticleController::show() should be compatible with that of Think\Controller::show() G:\wamp\www\blog\Application\Home\Controller\MyarticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM thinkphp_article article LEFT JOIN thinkphp_user user ON article.author_id=user.id WHERE article.author_id = '2' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT article.id AS id,article.title AS title,article.release_time AS release_time,article.author_id AS author_id,user.id AS userid,user.username AS username FROM thinkphp_article article LEFT JOIN thinkphp_user user ON article.author_id=user.id WHERE article.author_id = '2' ORDER BY article.release_time desc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+NOTIC: [8] Undefined index: kind G:\wamp\www\blog\Application\Runtime\Cache\Home\97cb5c65f7c513cfc6ffe3a31f757d03.php 第 108 行.
+NOTIC: [8] Undefined index: kind G:\wamp\www\blog\Application\Runtime\Cache\Home\97cb5c65f7c513cfc6ffe3a31f757d03.php 第 109 行.
+NOTIC: [8] Undefined index: kind G:\wamp\www\blog\Application\Runtime\Cache\Home\97cb5c65f7c513cfc6ffe3a31f757d03.php 第 111 行.
+NOTIC: [8] Undefined index: kind G:\wamp\www\blog\Application\Runtime\Cache\Home\97cb5c65f7c513cfc6ffe3a31f757d03.php 第 108 行.
+NOTIC: [8] Undefined index: kind G:\wamp\www\blog\Application\Runtime\Cache\Home\97cb5c65f7c513cfc6ffe3a31f757d03.php 第 109 行.
+NOTIC: [8] Undefined index: kind G:\wamp\www\blog\Application\Runtime\Cache\Home\97cb5c65f7c513cfc6ffe3a31f757d03.php 第 111 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.094803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.094909s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000985s ]
+
+[ 2017-04-29T00:37:07+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002298s ]
+
+[ 2017-04-29T00:37:08+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001535s ]
+
+[ 2017-04-29T00:37:21+08:00 ] ::1 /blog/index.php/Home/Message/message?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0172s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '1' AND addfriend.state = '0'  [ RunTime:0.0010s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=1 AND state>0 )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0143s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0100s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '1' AND favorite.is_update = '1'  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+NOTIC: [8] Undefined variable: result1 G:\wamp\www\blog\Application\Runtime\Cache\Home\b894a6a660b73574cf4311339873232f.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2017-04-29T00:37:21+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001232s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001425s ]
+
+[ 2017-04-29T00:37:21+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000096s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001508s ]
+
+[ 2017-04-29T00:37:25+08:00 ] ::1 /blog/index.php/Home/Message/Haveread
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001871s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0248s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE `uid` = 1 AND `Lid` = 2 LIMIT 1   [ RunTime:0.0022s ]
+SQL: UPDATE `thinkphp_favorite` SET `uid`='1',`is_update`='0',`article_id`='0' WHERE `id` = 8 [ RunTime:0.1303s ]
+
+[ 2017-04-29T00:37:26+08:00 ] ::1 /blog/index.php/Home/Index/index?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002465s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0249s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_article` WHERE ( author_id=2 ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `thinkphp_article` WHERE ( author_id=2 ) ORDER BY release_time desc LIMIT 0,5   [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\blog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT * FROM `thinkphp_article` ORDER BY release_time desc LIMIT 10   [ RunTime:0.0045s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000381s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002805s ]
+
+[ 2017-04-29T00:37:26+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001063s ]
+
+[ 2017-04-29T00:37:27+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+
+[ 2017-04-29T00:37:33+08:00 ] ::1 /blog/index.php/Home/Article/article?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001549s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0123s ]
+SQL: SELECT article.id AS id,article.title AS title,article.content AS content,article.author_id AS author_id,article.picture AS picture,article.desc AS articledesc,article.release_time AS release_time,user.username AS username,user.pic AS pic,user.sex AS sex,user.age AS age,user.desc AS userdesc,user.sign AS sign FROM thinkphp_article article LEFT JOIN thinkphp_user user ON article.author_id=user.id WHERE article.id = '8' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0121s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_favorite` WHERE `Lid` = 2 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT article.id AS id,article.title AS title,article.content AS content,article.author_id AS author_id,article.picture AS picture,article.desc AS articledesc,article.release_time AS release_time,user.username AS username,user.pic AS pic,user.sex AS sex,user.age AS age,user.desc AS userdesc,user.sign AS sign FROM thinkphp_article article LEFT JOIN thinkphp_user user ON article.author_id=user.id WHERE ( author_id=2 ) ORDER BY article.release_time desc LIMIT 10   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `thinkphp_comment` [ RunTime:0.0116s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_comment` WHERE `article_id` = 8 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `thinkphp_comment` WHERE `article_id` = 8 ORDER BY time asc LIMIT 0,8   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000265s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000395s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027167s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000890s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000944s ]
+
+[ 2017-04-29T00:37:33+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001663s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002184s ]
+
+[ 2017-04-29T00:37:34+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001302s ]
+
+[ 2017-04-29T00:43:30+08:00 ] ::1 /blog/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0013s ]
+SQL: UPDATE `thinkphp_user` SET `username`='Charlotte',`password`='123456',`sex`='1',`age`='24',`birthday`='2017-02-19',`pic`='/blog/Public/Image/Pic/Charlotte/2017-04-26/58ff76768ff34.jpg',`mail`='347369743@qq.com',`phonenum`='18814182486',`desc`='我是吴彦祖',`sign`='我超喜欢美女',`online`='0',`reg_time`='100' WHERE `id` = 1 [ RunTime:0.1840s ]
+
+[ 2017-04-29T00:43:30+08:00 ] ::1 /blog/index.php/Home/Message/message?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009027s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001207s ]
+
+[ 2017-04-29T00:43:33+08:00 ] ::1 /blog/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2017-04-29T00:43:33+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000878s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001062s ]
+
+[ 2017-04-29T00:43:56+08:00 ] ::1 /blog/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001204s ]
+NOTIC: [8] Undefined index: model G:\wamp\www\blog\Application\Home\Controller\LoginController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE `username` = 'admin' AND `password` = '123' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `thinkphp_user` SET `username`='admin',`password`='123',`sex`='1',`age`=NULL,`birthday`='0',`pic`='/blog/Public/Image/first-head.png',`mail`=NULL,`phonenum`=NULL,`desc`='这个人很懒。什么都没留下...',`sign`='这家伙没留下什么信息...',`online`='1',`reg_time`='' WHERE `id` = 3 [ RunTime:0.2239s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009386s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000962s ]
+
+[ 2017-04-29T00:43:59+08:00 ] ::1 /blog/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000088s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001893s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001410s ]
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\IndexController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0157s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_article` WHERE ( author_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `thinkphp_article` WHERE ( author_id=3 ) ORDER BY release_time desc LIMIT 0,5   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\blog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT * FROM `thinkphp_article` ORDER BY release_time desc LIMIT 10   [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2017-04-29T00:43:59+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001798s ]
+
+[ 2017-04-29T00:43:59+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000108s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002305s ]
+
+[ 2017-04-29T00:44:05+08:00 ] ::1 /blog/index.php/Home/Favorite/favorite?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001136s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0129s ]
+SQL: SELECT COUNT(*) AS tp_count FROM thinkphp_favorite favorite LEFT JOIN thinkphp_user user ON favorite.lid=user.id WHERE favorite.uid = '3' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT favorite.id AS id,favorite.uid AS uid,user.username AS username,user.sex AS sex,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_user user ON favorite.lid=user.id WHERE favorite.uid = '3' ORDER BY favorite.id desc LIMIT 0,6   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000421s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001623s ]
+
+[ 2017-04-29T00:44:09+08:00 ] ::1 /blog/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001550s ]
+NOTIC: [8] Undefined index: id G:\wamp\www\blog\Application\Home\Controller\IndexController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0122s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_article` WHERE ( author_id=3 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `thinkphp_article` WHERE ( author_id=3 ) ORDER BY release_time desc LIMIT 0,5   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\blog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT * FROM `thinkphp_article` ORDER BY release_time desc LIMIT 10   [ RunTime:0.0089s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016606s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000941s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001039s ]
+
+[ 2017-04-29T00:44:09+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001216s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001399s ]
+
+[ 2017-04-29T00:44:10+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001592s ]
+
+[ 2017-04-29T00:44:15+08:00 ] ::1 /blog/index.php/Home/Message/message
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000841s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0112s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0104s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '3' AND addfriend.state = '0'  [ RunTime:0.0010s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=3 AND state>0 )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0128s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0156s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '3' AND favorite.is_update = '1'  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000853s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000959s ]
+
+[ 2017-04-29T00:44:16+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000903s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001139s ]
+
+[ 2017-04-29T00:44:16+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001540s ]
+
+[ 2017-04-29T00:44:30+08:00 ] ::1 /blog/index.php/Home/Message/message
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0158s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '3' AND addfriend.state = '0'  [ RunTime:0.0007s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=3 AND state>0 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0102s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '3' AND favorite.is_update = '1'  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000742s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001539s ]
+
+[ 2017-04-29T00:44:31+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001189s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001367s ]
+
+[ 2017-04-29T00:44:31+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000942s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004230s ]
+
+[ 2017-04-29T00:48:25+08:00 ] ::1 /blog/index.php/Home/Message/message
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0120s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '3' AND addfriend.state = '0'  [ RunTime:0.0008s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=3 AND state>0 )  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0105s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '3' AND favorite.is_update = '1'  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017727s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001103s ]
+
+[ 2017-04-29T00:48:27+08:00 ] ::1 /blog/index.php/Home/Message/message?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0134s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0149s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '3' AND addfriend.state = '0'  [ RunTime:0.0011s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=3 AND state>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0126s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0128s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '3' AND favorite.is_update = '1'  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017168s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017409s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000841s ]
+
+[ 2017-04-29T00:48:27+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002985s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000821s ]
+
+[ 2017-04-29T00:48:27+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
+
+[ 2017-04-29T00:48:42+08:00 ] ::1 /blog/index.php/Home/Message/message?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000849s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000960s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0113s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '3' AND addfriend.state = '0'  [ RunTime:0.0012s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=3 AND state>0 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0098s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '3' AND favorite.is_update = '1'  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000903s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001103s ]
+
+[ 2017-04-29T00:48:42+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001214s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001422s ]
+
+[ 2017-04-29T00:48:42+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001730s ]
+
+[ 2017-04-29T00:48:55+08:00 ] ::1 /blog/index.php/Home/Message/message
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001309s ]
+SQL: SHOW COLUMNS FROM `thinkphp_addfriend` [ RunTime:0.0165s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0139s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.send_id=user.id WHERE addfriend.receive_id = '3' AND addfriend.state = '0'  [ RunTime:0.0008s ]
+SQL: SELECT addfriend.id AS id,addfriend.send_id AS send_id,addfriend.receive_id AS receive_id,addfriend.state AS state,user.username AS username,user.pic AS pic FROM thinkphp_addfriend addfriend LEFT JOIN thinkphp_user user ON addfriend.receive_id=user.id WHERE ( send_id=3 AND state>0 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0104s ]
+SQL: SELECT favorite.id AS id,favorite.Lid AS Lid,favorite.is_update AS is_update,article.title AS title,user.username AS username,user.pic AS pic FROM thinkphp_favorite favorite LEFT JOIN thinkphp_article article ON favorite.article_id=article.id RIGHT JOIN thinkphp_user user ON article.author_id=user.id WHERE `uid` = '3' AND favorite.is_update = '1'  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000338s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000828s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019329s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001003s ]
+
+[ 2017-04-29T00:48:55+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001908s ]
+
+[ 2017-04-29T00:48:55+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001404s ]
+
+[ 2017-04-29T00:49:55+08:00 ] ::1 /blog/index.php/Home/Index/index?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002682s ]
+SQL: SHOW COLUMNS FROM `thinkphp_article` [ RunTime:0.0145s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_article` WHERE ( author_id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `thinkphp_article` WHERE ( author_id=1 ) ORDER BY release_time desc LIMIT 0,5   [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `thinkphp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\blog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT * FROM `thinkphp_article` ORDER BY release_time desc LIMIT 10   [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017607s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001317s ]
+
+[ 2017-04-29T00:49:56+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001325s ]
+
+[ 2017-04-29T00:49:56+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+
+[ 2017-04-29T00:49:58+08:00 ] ::1 /blog/index.php/Home/Friend/sendaddrequest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001268s ]
+SQL: SHOW COLUMNS FROM `thinkphp_friend` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_friend` WHERE `uid` = 3 AND `fid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-29T00:50:01+08:00 ] ::1 /blog/index.php/Home/Favorite/addfavorite
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+SQL: SHOW COLUMNS FROM `thinkphp_favorite` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `thinkphp_favorite` WHERE `uid` = 3 AND `Lid` = 1 LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2017-04-29T00:51:15+08:00 ] ::1 /blog/index.php/Home/Moments/moments?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001334s ]
+SQL: SHOW COLUMNS FROM `thinkphp_moments` [ RunTime:0.0147s ]
+SQL: SHOW COLUMNS FROM `thinkphp_friend` [ RunTime:0.0124s ]
+SQL: SELECT `fid` FROM `thinkphp_friend` WHERE ( uid=1 )  [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `thinkphp_moments` WHERE `authod_id` IN ('1','2','3','4','5') LIMIT 1   [ RunTime:0.0938s ]
+SQL: SELECT * FROM `thinkphp_moments` WHERE `authod_id` IN ('1','2','3','4','5') ORDER BY time desc LIMIT 0,5   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `thinkphp_mmtlove` [ RunTime:0.0133s ]
+SQL: SELECT `Lover` FROM `thinkphp_mmtlove` WHERE ( 1=1 AND Cid='20' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `thinkphp_user` [ RunTime:0.0130s ]
+SQL: SELECT `username`,`pic` FROM `thinkphp_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `thinkphp_mmtmess` [ RunTime:0.0137s ]
+SQL: SELECT `from_name`,`comments`,`is_reply`,`reply_name` FROM `thinkphp_mmtmess` WHERE ( 1=1 AND Cid='20' )  [ RunTime:0.0012s ]
+SQL: SELECT `Lover` FROM `thinkphp_mmtlove` WHERE ( 1=1 AND Cid='18' )  [ RunTime:0.0007s ]
+SQL: SELECT `username`,`pic` FROM `thinkphp_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `from_name`,`comments`,`is_reply`,`reply_name` FROM `thinkphp_mmtmess` WHERE ( 1=1 AND Cid='18' )  [ RunTime:0.0009s ]
+SQL: SELECT `Lover` FROM `thinkphp_mmtlove` WHERE ( 1=1 AND Cid='17' )  [ RunTime:0.0004s ]
+SQL: SELECT `username`,`pic` FROM `thinkphp_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `from_name`,`comments`,`is_reply`,`reply_name` FROM `thinkphp_mmtmess` WHERE ( 1=1 AND Cid='17' )  [ RunTime:0.0009s ]
+SQL: SELECT `Lover` FROM `thinkphp_mmtlove` WHERE ( 1=1 AND Cid='16' )  [ RunTime:0.0006s ]
+SQL: SELECT `username`,`pic` FROM `thinkphp_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `from_name`,`comments`,`is_reply`,`reply_name` FROM `thinkphp_mmtmess` WHERE ( 1=1 AND Cid='16' )  [ RunTime:0.0008s ]
+SQL: SELECT `Lover` FROM `thinkphp_mmtlove` WHERE ( 1=1 AND Cid='15' )  [ RunTime:0.0008s ]
+SQL: SELECT `username`,`pic` FROM `thinkphp_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `from_name`,`comments`,`is_reply`,`reply_name` FROM `thinkphp_mmtmess` WHERE ( 1=1 AND Cid='15' )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000829s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2017-04-29T00:51:15+08:00 ] ::1 /blog/index.php/Home/Public/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001247s ]
+
+[ 2017-04-29T00:51:15+08:00 ] ::1 /blog/index.php/Home/Common/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+

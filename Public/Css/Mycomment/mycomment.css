@@ -1,0 +1,251 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textare,p{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background:url("../../Image/background/user-bk.jpg") no-repeat;
+	background-size:100%;
+}
+h1 { 
+	font-size:24px;
+}
+p { 
+	word-wrap: break-word;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#nav{
+	display:inline-block;
+	width:580px;
+	height:60px;
+}
+header {
+	width: 100%; 
+	background: #666; 
+	height: 60px; 
+	border-bottom: #464647 1px solid;
+	text-align:center;
+}
+
+nav ul li{
+	display:inline;
+	line-height:40px;
+}
+nav ul li a{
+	color:#EAE9E9;
+	display:block;
+	float:left;
+	padding:10px;
+	margin-right:5px;
+}
+nav ul li a:hover{
+	color:black;
+	text-decoration:none;
+	background:#eee;
+	border-radius:6px;
+}
+.login{
+	display:inline-block;
+	float:right;
+}
+.login a{
+	color:#EAE9E9;
+	position:relative;
+	top:20px;
+	right:30px;
+}
+#loading{
+	background:url(../../Image/loading.gif) no-repeat;
+	background-size:80px 85px;
+	background-position:100px -20px;
+	line-height:25px;
+	font-size:16px;
+	text-indent:5px;
+	color:black;
+}
+#success,#default,#quit{
+	text-indent:5px;
+}
+form input{
+	width:150px;
+	height:20px;
+	text-indent:5px;
+	margin-top:5px;
+	margin-left:5px;
+	font-size:13px;
+	background:#fff;
+	color:#666;
+	border-radius:4px;
+}
+form img{
+	cursor:pointer;
+}
+form #img1{
+	position:relative;
+	top:7px;
+}
+.ui-tooltip{
+	color:red;
+}
+#mainbody{
+	width: 1200px;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius:6px;
+}
+aside{
+	width: 150px;
+	float: left;
+	border-radius:6px;
+	border:black 1px solid;
+}
+#choose li{
+	font-size:16px;
+	line-height:28px;
+	color:black;
+}
+#choose li:nth-child(-n+7){
+	border-bottom:black 1px solid;
+}
+#choose li span{
+	display:block;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	color:#3A3838;
+}
+#choose li span:hover{
+	color:#2F8A18;
+	cursor:pointer;
+	background: rgba(0, 0, 0, .1);
+	border-left:#2F8A18 6px solid;
+	transition: .5s;
+}
+.labelsize{
+	width:30px;
+	height:30px;
+}
+.navlabel{
+	background:url("../../Image/remind.png");
+	background-size:30px 30px;
+	position:absolute;
+	top:333px;
+	left:192px;
+	display:none;
+}
+#list{
+	width:1000px;
+	border-radius:4px;
+	float:right;
+}
+#mycomment{
+	float:left;
+	margin-left:50px;
+	width:900px;
+	border-radius:6px;
+}
+#info-show{
+	width: 700px;
+	height:100px;
+	margin:20px auto;
+	border:1px black solid;
+	border-radius:6px;
+}
+#comment-author{
+	width: 100px;
+	height:100px;
+	float:left;
+}
+#comment-author img{
+	width:60px;
+	height:60px;
+	border-radius:60px;
+	margin-left:20px;
+	margin-top:10px;
+	border:1px #888888 solid;
+	box-shadow: 0 0 8px #c0c0c0;
+}
+#comment-author p{
+	font-size:16px;
+	color:#0099ff;
+	text-align:center;
+}
+#comment-body{
+	width: 600px;
+	height:100px;
+	float: right;
+}
+#comment-body span{
+	font-weight:800;
+	color:#326b5b;
+	display:block;
+	height:30px;
+	width:100%;
+}
+#comment-body .comment-content{
+	display:block;
+	box-sizing:border-box;
+	width:100%;
+	height:40px;
+	line-height: 20px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	text-indent:30px;
+	color:#171515;
+	overflow:hidden;
+	word-break:keep-all;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.be_replypic{
+	display:inline-block;
+	width:30px;
+	height:30px;
+	border:1px #888888 solid;
+	border-radius:30px;
+	box-shadow: 0 0 8px #c0c0c0;
+	vertical-align:middle;
+	margin:0 5px;
+}
+#comment-body .comment-footer{
+	width:100%;
+	box-sizing:border-box;
+	padding-left:30px;
+	height:30px;
+}
+#comment-body .comment-footer .Oh{
+	width:100px;
+	height:30px;
+	color: #c0c0c0;
+	display:inline-block;
+}
+#comment-body .comment-footer .time{
+	width:300px;
+	height:30px;
+	color: #c0c0c0;
+	display:inline-block;
+}
+#comment-body .comment-footer .Go{
+	height:30px;
+	width:80px;
+	float:right;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: #99cc66;
+	border-radius:4px;
+	cursor:pointer;
+	transition-duration:1s;
+}
+#comment-body .comment-footer .Go:hover{
+	color:black;
+}

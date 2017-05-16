@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>信息通知</title>
+<link href="__PUBLIC__/Css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/Page/page.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/Favorite/favorite.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.js" ></script> 
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-ui.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/head.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/common.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/leftnav.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Favorite/favorite.js" ></script>
+</head>
+<body>
+	
+	<include file="Public:head" />
+	
+	<input type="hidden" name="username" value="<?php echo $_SESSION['username'] ?>" />
+	<input type="hidden" name="userid" value="<?php echo $_SESSION['id'] ?>" />
+	
+	<div id="mainbody">
+		<include file="Public:leftnav" />
+		
+		<div id="favoriteList">
+			<div class="favoritebody">
+				<ul>
+					<volist name="list" id="vo">
+						<li>
+							<div class="favomenber">
+								<div class="left">
+									<img src="{$vo['pic']}" />
+									<button class="goTosee">去看看Ta</button>
+									<input type="hidden" name="targetid" value="{$vo['targetid']}" />
+								</div>
+								<div class="infobody">
+									<div class="Favouser">
+										<label class="userlabel labelsize"></label>
+										<span><a href="__APP__/Home/Index/index?id={$vo['targetid']}">{$vo['username']}</a></span>
+									</div>
+									<div class="sex">
+										<if condition="$vo['sex'] eq 1">
+											<label class="manlabel labelsize"></label>
+											<span>男</span>
+										<else/>
+											<label class="womenlabel labelsize"></label>
+											<span>女</span>
+										</if>
+									</div>
+									<div class="sign">
+										<label class="signlabel labelsize"></label>
+										<span>{$vo['sign']}</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</volist>
+				</ul>
+			</div>
+			
+			<div class="pagination">{$page}</div>
+		</div>
+		
+			
+	</div>
+</body>
+</html>

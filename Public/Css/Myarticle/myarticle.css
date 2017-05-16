@@ -1,0 +1,385 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textare,p{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background:url("../../Image/background/user-bk.jpg") no-repeat;
+	background-size:100%;
+}
+h1 { 
+	font-size:24px;
+}
+p { 
+	word-wrap: break-word;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#nav{
+	display:inline-block;
+	width:580px;
+	height:60px;
+}
+header {
+	width: 100%; 
+	background: #666; 
+	height: 60px; 
+	border-bottom: #464647 1px solid;
+	text-align:center;
+}
+
+nav ul li{
+	display:inline;
+	line-height:40px;
+}
+nav ul li a{
+	color:#EAE9E9;
+	display:block;
+	float:left;
+	padding:10px;
+	margin-right:5px;
+}
+nav ul li a:hover{
+	color:black;
+	text-decoration:none;
+	background:#eee;
+	border-radius:6px;
+}
+.login{
+	display:inline-block;
+	float:right;
+}
+.login a{
+	color:#EAE9E9;
+	position:relative;
+	top:20px;
+	right:30px;
+}
+#loading{
+	background:url(../../Image/loading.gif) no-repeat;
+	background-size:80px 85px;
+	background-position:100px -20px;
+	line-height:25px;
+	font-size:16px;
+	text-indent:5px;
+	color:black;
+}
+#success,#default,#quit{
+	text-indent:5px;
+}
+form input{
+	width:150px;
+	height:20px;
+	text-indent:5px;
+	margin-top:5px;
+	margin-left:5px;
+	font-size:13px;
+	background:#fff;
+	color:#666;
+	border-radius:4px;
+}
+form img{
+	cursor:pointer;
+}
+form #img1{
+	position:relative;
+	top:7px;
+}
+#mainbody{
+	width: 1200px;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius:6px;
+}
+aside{
+	width: 150px;
+	float: left;
+	border-radius:6px;
+	border:black 1px solid;
+}
+#choose li{
+	font-size:16px;
+	line-height:28px;
+	color:black;
+}
+#choose li:nth-child(-n+7){
+	border-bottom:black 1px solid;
+}
+#choose li span{
+	display:block;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	color:#3A3838;
+}
+#choose li span:hover{
+	color:#2F8A18;
+	cursor:pointer;
+	background: rgba(0, 0, 0, .1);
+	border-left:#2F8A18 6px solid;
+	transition:.5s;
+}
+.labelsize{
+	width:30px;
+	height:30px;
+}
+.navlabel{
+	background:url("../../Image/remind.png");
+	background-size:30px 30px;
+	position:absolute;
+	top:335px;
+	left:192px;
+	display:none;
+}
+#tabs{
+	width:950px;
+	border:1px green solid;
+	border-radius:6px;
+	float:left;
+	margin-left:50px;
+}
+table{
+	*border-collapse: collapse; /* IE7 and lower */    
+	border-spacing: 0;    
+	border-radius:6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	width: 90%;
+	margin:0 auto;
+	margin-top:15px;
+}
+#myarticle .mytable{
+	border: solid #ccc 1px;
+	-webkit-box-shadow: 0 1px 1px #ccc;
+	-moz-box-shadow: 0 1px 1px #ccc;
+	box-shadow: 0 1px 1px #ccc;
+}
+#myarticle .mytable tr{
+	-o-transition: all 0.1s ease-in-out;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-ms-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+
+}
+#myarticle .mytable tr:hover{
+	background: #fbf8e9;
+}
+#myarticle .mytable td,th{
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	padding: 10px;
+	text-align: left;
+}
+#myarticle .mytable th{
+	background-color: #dce9f9;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+	background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+	background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+	background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+	background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+	background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9)";
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+	-moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+	box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	border-top: none;
+}
+#myarticle .mytable td:first-child,th:first-child{
+	border-left:none;
+}
+#myarticle .mytable th:first-child{
+	-moz-border-radius: 6px 0 0 0;
+	-webkit-border-radius: 6px 0 0 0;
+	border-radius: 6px 0 0 0;
+
+}
+#myarticle .mytable th:last-child{
+	-moz-border-radius: 0 6px 0 0;
+	-webkit-border-radius: 0 6px 0 0;
+	border-radius: 0 6px 0 0;
+}
+#myarticle .mytable tr:last-child td:first-child{
+	-moz-border-radius: 0 0 0 6px;
+	-webkit-border-radius: 0 0 0 6px;
+	border-radius: 0 0 0 6px;
+}
+#myarticle .mytable tr:last-child td:last-child{
+	-moz-border-radius: 0 0 6px 0;
+	-webkit-border-radius: 0 0 6px 0;
+	border-radius: 0 0 6px 0;
+}
+#myarticle .mytable tr td button{
+	width:60px;
+	height:30px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	border-radius:4px;
+	background-color: #99cc66;
+	margin-left:6px;
+	transition:1s;
+}
+#myarticle .mytable tr td button a{
+	color: #fff;
+}
+#myarticle .mytable tr td button:hover{
+	background-color: #060606;
+}
+#myarticle .mytable .Goto{
+	transition:.8s;
+}
+#myarticle .mytable .Goto:hover{
+	color:red;
+	font-size:18px;
+}
+#newarticle{
+	width:900px;
+	overflow:hidden;
+}
+.Arttitle input{
+	width:500px;
+	line-height:25px;
+	background:#fff;
+	padding:5px 5px;
+	border: 1px solid #D6D6D6;
+	border-radius:4px;
+	margin-left:20px;	
+}
+.Arttitle input:hover{
+	border:1px solid #006699;
+	transition:1s;
+}
+.Arttitle input:focus{
+	border:1px solid #006699;
+	box-shadow:0 0 5px #006699;
+	outline-style:none;
+}
+.Artdsesc{
+	margin-top:30px;
+}
+.Artdsesc textarea{
+	height:60px;
+	width:500px;
+	resize:none;
+	padding:5px 5px 10px 10px;
+	margin-left:20px;
+	border: 1px solid #D6D6D6;
+	border-radius:4px;
+	overflow:auto;
+}
+.Artdsesc textarea:hover{
+	border:1px solid #006699;
+	transition:1s;
+}
+.Artdsesc textarea:focus{
+	border:1px solid #006699;
+	box-shadow:0 0 5px #006699;
+	outline-style:none;
+}
+.Artdsesc label{
+	vertical-align:top;
+}
+.kind{
+	width:800px;
+	height:40px;
+	margin-top:10px;
+}
+.kind label{
+	position:relative;
+	margin-left:30px;
+	padding-left:30px;
+}
+.Artpic{
+	margin-top:30px;
+	width:550px;
+	height:200px;
+}
+.Artpic .hidden{
+	margin-left:20px;
+	width:100px;
+	height:100px;
+	background:url('../../Image/add_picture.png') no-repeat;
+	background-size:100px 100px;
+	border:2px #fff dashed;
+	display:inline-block;
+}
+.Artpic .hidden:hover{
+	opacity:.5;
+	transition-duration:.4s;
+}
+.Artpic input{
+	width:100px;
+	height:100px;
+	cursor:pointer;
+	opacity:0;
+}
+.Artpic .Pre-box{
+	width:160px;
+	height:210px;
+	overflow:hidden;
+	float:right;
+}
+.Artpic .Pre-see{
+	display:inline-block;
+	width:85px;
+	height:30px;
+	margin-left:30px;
+	text-align:right;
+	background:url("../../Image/pre-see.png") no-repeat;
+	background-size:30px 30px;
+	background-position:-3px -6px;
+}
+.Artpic .Pre-box img{
+	width:expression(document.body.clientWidth > 150? "150px": "auto" );
+	max-width:150px;
+	max-height:200px;
+	border-radius:10px;
+	box-shadow:2px 2px 7px #888888; 
+}
+.Artcontent{
+	margin-top:30px;
+}
+.button{
+	height:30px;
+	float:right;
+}
+.button button{
+	width: 60px;
+	height: 30px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: #99cc66;
+	border-radius:4px;
+}
+.button button:hover{
+	background:#7250b5;
+	color:#99cc66;
+	transition:1s;
+}
+.button button:focus{
+	color: #fff;
+	background-color: #99cc66;
+	transition:.3s;
+}
+#waiting{
+	background:url(../../Image/loading.gif) no-repeat;
+	background-size:80px 85px;
+	background-position:70px -20px;
+	line-height:25px;
+	font-size:16px;
+}

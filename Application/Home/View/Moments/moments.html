@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>朋友圈</title>
+
+<link href="__PUBLIC__/Css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/Page/page.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/Moments/moments.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/jquery.sinaEmotion.css" />
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.js" ></script> 
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-ui.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/head.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.sinaEmotion.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/common.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Moments/moments.js"></script>
+</head>
+<body>
+	
+	<include file="Public:head" />
+	
+	<input type="hidden" name="username" value="<?php echo $_SESSION['username'] ?>" />
+	<input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>" />
+	
+	
+	<div id="header">
+		<img id="bg" src="__PUBLIC__/Image/bg.jpg" />
+		<p id="Poname">{$result['username']}</p>
+		<img id="head-face" src="{$result['pic']}" />
+	</div>
+	
+	<div id="mainbody">
+		<div id="momentslist">
+			<ul>
+				<volist name="info" id="ro" >
+					<li>
+						<div class="pic">
+							<img src="{$ro['popic']}" />
+						</div>
+						<div class="cmtbody">
+							<div class="po-cnt">
+								<p><span class="friendname">{$ro['poname']}</span></p>
+								<div class="content">
+									<p style="padding-left:10px;"><?php echo htmlspecialchars_decode($ro['content']); ?></p>
+									<if condition="$ro['picture'][0] eq '0' || $ro['picture'][0] eq ''">
+									<else/>
+										<volist name="ro['picture']" id="pi" >
+											<p class="imgbox">
+												<img class="listimg" src="{$pi}" />
+											</p>
+										</volist>
+									</if>
+								</div>
+								<p class="time">{$ro['time']}<p/>
+								<img class="c-icon" src="__PUBLIC__/Image/c.png" />
+								<div class="chose">
+									<div class="D1">
+										<img src="__PUBLIC__/Image/good.png" /><span>赞</span>
+									</div>
+									<div class="D2">
+										<img src="__PUBLIC__/Image/comments.png" /><span>评论</span>
+									</div>
+								</div>
+								<input type="hidden" name="mmtsid" value="{$ro['id']}" />
+							</div>
+							<div class="r"></div>
+							<div class="comment">
+								<div class="like">
+									<if condition="empty($ro['Loverlist'])">
+										<input type="hidden" name="is" value="0" />
+										<img style="display:none;" src="__PUBLIC__/Image/l.png">
+									<else/>							
+										<input type="hidden" name="is" value="1" />
+										<img src="__PUBLIC__/Image/l.png">
+										<volist name="ro['Loverlist']" id="vo" key="k">
+											<if condition="$k eq '1' ">
+												{$vo['lover']}
+											<else/>
+												,{$vo['lover']}
+											</if>
+										</volist>
+									</if>
+								</div>
+								<div class="cmtlist">
+									<volist name="ro['commentlist']"  id="xo">
+										<if condition="$xo['is_reply'] eq '1' ">
+											<div>
+												<span class="cmt-user" style="float:left;margin-top:0px;">{$xo['from_name']}</span>
+														<span style="float:left;margin-top:0px;color:black;">
+															&nbsp回复&nbsp
+														</span>
+														<span style="float:left;margin-top:0px;">
+															{$xo['reply_name']}
+														</span>
+														<span style="float:left;margin-top:0px;color:black;">
+															：
+														</span>
+												<p>{$xo['comments']}</p>
+											</div>
+										<else/>
+											<div>
+												<span class="cmt-user" style="float:left;margin-top:0px;">{$xo['from_name']}</span>
+												<span style="float:left;margin-top:0px;color:black;">
+													：
+												</span>
+												<p>{$xo['comments']}</p>
+											</div>
+										</if>
+									</volist>
+									<!-- 
+									<div class="cmtbox">
+										<input type="hidden" name="is_reply" value="0" />
+										<textarea name="comment" class="comment"  placeholder="限制60字..." contenteditable="true" maxlength="60"></textarea>
+										<div class="toolsbox">
+											<span class="emoji">😚</span>
+											<input type="button" name="button" class="cmt-btn" value="评论" />
+											<p style="display:none;"></p>
+										</div>
+									</div>
+									-->
+								</div>
+							</div>
+						</div>
+					</li>
+				</volist>	
+			</ul>
+		</div>
+		
+		<div id="command">
+			请输入内容...
+		</div>
+		<div id="sending">
+			发表中...
+		</div>
+		<div id="success-send">
+			发表成功！
+		</div>
+		
+		<div class="pagination">{$page}</div>
+	</div>
+	
+	<div id="New">
+		<img src="__PUBLIC__/Image/New.png" title="发表朋友圈" />
+	<div>
+	
+
+
+</body>
+</html>

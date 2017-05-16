@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>信息通知</title>
+<link href="__PUBLIC__/Css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Css/Message/message.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.js" ></script> 
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-ui.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/head.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/common.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/leftnav.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Message/message.js" ></script>
+</head>
+<body>
+	
+	<include file="Public:head" />
+	
+	<input type="hidden" name="username" value="<?php echo $_SESSION['username'] ?>" />
+	<input type="hidden" name="userid" value="<?php echo $_SESSION['id'] ?>" />
+	
+	<div id="mainbody">
+		<include file="Public:leftnav" />
+		
+		<div id="tabs">
+			
+			<ul>
+				<li><a href="#Addmessage">新的朋友</a></li>
+				<label class="remindlabel labelsize"></label>
+				<li><a href="#Result">申请结果</a></li>
+				<label class="remindlabel2 labelsize"></label>
+				<li><a href="#LoveMess">关注消息</a></li>
+				<label class="remindlabel3 labelsize"></label>
+			</ul>
+		
+			<div id="Addmessage">
+				<volist name="result" id="vo" empty="暂时没有新的消息哦(￣︶￣)">
+					<div class="Messbody">
+						<input type="hidden" name="send_id" value="{$vo['send_id']}" />
+						<div class="head">
+							<img src="{$vo['pic']}" />
+						</div>
+						<div class="infobody">
+							<span>{$vo['username']}</span>
+							<p>对方请求添加你为好友...</p>
+						</div>
+						<div class="button">
+							<button class="Receive">接受</button>
+							<button class="Refuse">拒绝</button>
+						</div>
+					</div>
+				</volist>	
+			</div>
+			
+			<div id="Result">
+				<volist name="result1" id="vo" empty="暂时没有新的消息哦(￣︶￣)">
+					<div class="RefuseMess">
+						<input type="hidden" name="receive_id" value="{$vo['receive_id']}" />
+						<input type="hidden" name="state" value="{$vo['state']}" />
+						<div class="head2">
+							<img src="{$vo['pic']}" />
+						</div>
+						<div class="infobody2">
+							<span>{$vo['username']}</span>
+							<if condition=" $vo['state'] eq 2">
+								<p>对方拒绝了你的好友请求...</p>
+							<else/>
+								<p>对方添加你为好友啦...</p>
+							</if>
+						</div>
+						<div class="button2">
+							<button class="Iknow">我知道了</button>
+						</div>
+					</div>
+				</volist>
+			</div>
+			
+			<div id="LoveMess">
+				<volist name="result2" id="ro" empty="关注的博主还没有新更新哦(￣︶￣)">
+					<div class="upload">
+						<input type="hidden" name="Lid" value="{$ro['lid']}" />
+						<div class="head3">
+							<img src="{$vo['pic']}" />
+						</div>
+						<div class="infobody3">
+							<span>{$ro['username']}</span>
+							<p>更新了文章：{$ro['title']}</p>
+						</div>
+						<div class="button3">
+							<button class="Tosee">去他博客</button>
+						</div>
+					</div>
+				</volist>
+			</div>
+		
+		</div>
+		
+		<div id="handle">
+			处理中...
+		</div>
+
+		<div id="confirm">
+			确定拒绝好友申请吗？
+		</div>
+		
+	</div>
+</body>
+</html>

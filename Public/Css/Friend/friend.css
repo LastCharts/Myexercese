@@ -1,0 +1,445 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textare,p{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background:url("../../Image/background/user-bk.jpg") no-repeat;
+	background-size:100%;
+}
+h1 { 
+	font-size:24px;
+}
+p { 
+	word-wrap: break-word;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#nav{
+	display:inline-block;
+	width:580px;
+	height:60px;
+}
+header {
+	width: 100%; 
+	background: #666; 
+	height: 60px; 
+	border-bottom: #464647 1px solid;
+	text-align:center;
+}
+
+nav ul li{
+	display:inline;
+	line-height:40px;
+}
+nav ul li a{
+	color:#EAE9E9;
+	display:block;
+	float:left;
+	padding:10px;
+	margin-right:5px;
+}
+nav ul li a:hover{
+	color:black;
+	text-decoration:none;
+	background:#eee;
+	border-radius:6px;
+}
+.login{
+	display:inline-block;
+	float:right;
+}
+.login a{
+	color:#EAE9E9;
+	position:relative;
+	top:20px;
+	right:30px;
+}
+#loading{
+	background:url(../../Image/loading.gif) no-repeat;
+	background-size:80px 85px;
+	background-position:100px -20px;
+	line-height:25px;
+	font-size:16px;
+	text-indent:5px;
+	color:black;
+}
+#success,#default,#quit{
+	text-indent:5px;
+}
+form input{
+	width:150px;
+	height:20px;
+	text-indent:5px;
+	margin-top:5px;
+	margin-left:5px;
+	font-size:13px;
+	background:#fff;
+	color:#666;
+	border-radius:4px;
+}
+form img{
+	cursor:pointer;
+}
+form #img1{
+	position:relative;
+	top:7px;
+}
+#mainbody{
+	width: 1200px;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius:6px;
+}
+aside{
+	width: 150px;
+	float: left;
+	border-radius:6px;
+	border:black 1px solid;
+}
+#choose li{
+	font-size:16px;
+	line-height:28px;
+	color:black;
+}
+#choose li:nth-child(-n+7){
+	border-bottom:black 1px solid;
+}
+#choose li span{
+	display:block;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	color:#3A3838;
+}
+#choose li span:hover{
+	color:#2F8A18;
+	cursor:pointer;
+	background: rgba(0, 0, 0, .1);
+	border-left:#2F8A18 6px solid;
+	transition: .5s;
+}
+.labelsize{
+	width:30px;
+	height:30px;
+}
+.navlabel{
+	background:url("../../Image/remind.png");
+	background-size:30px 30px;
+	position:absolute;
+	top:333px;
+	left:182px;
+	display:none;
+}
+#frinedlist{
+	border:black 1px solid;
+	width:1000px;
+	height:655px;
+	float:right;
+	border-radius:6px;
+	background-color:white;
+}
+#frinedlist .friend{
+	width:230px;
+	height:700px;
+	float:left;
+	border-radius:6px;
+	opacity:1;
+}
+#frinedlist .friend .allfriend,.online,.outline{
+	height:400px;
+	overflow :yes;
+	overflow :auto;
+}
+.member{
+	border-bottom:black 1px solid;
+	width:170px;
+	height:55px;
+	margin-top:15px;
+	cursor:pointer;
+}
+.member img{
+	width:50px;
+	height:50px;
+	border-radius:50px;
+}
+.member .head-pic{
+	float:left;
+	
+}
+.member .info{
+	width:120px;
+	height:50;
+	overflow:hidden;
+	font-size:16px;
+	float:right;
+	box-sizing:border-box;
+	padding-left:12px;
+	margin-top:5px;
+}
+.member .info p{
+	font-size:14px;
+	margin-top:5px;
+}
+.member .info .user{
+	margin:0;
+	color:#c66;
+	opacity:1;
+	cursor:pointer;
+	transition:.5s;
+}
+.member .info .user:hover{
+	color:#f00;
+}
+.member .info span{
+	margin-left:10px;
+	color:red;
+	opacity:0;
+	cursor:pointer;
+}
+.member .info span:hover{
+	opacity:1;
+}
+#frinedlist .chatlist{
+	width:670px;
+	height:620px;
+	float:left;
+	border-radius:6px;
+	margin-left:10px;
+	margin-top:10px;
+	position:relative;
+}
+#frinedlist .chatlist .mess{
+	width:200px;
+	background-color:#eee;
+	border-radius:6px;
+	margin:0 auto;
+	text-align:center;
+	font-size:16px;
+	line-height:30px;
+}
+#chat-content{
+	width:600px;
+	height:471px;
+	overflow :auto;
+	border:#99cc66 1px solid;
+	border-bottom:none;
+	margin:0 auto;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	background:white;
+}
+#chat-content .left-content{
+	width:600px;
+	margin:15px 0 15px 15px;
+	float:left;
+	position:relative;
+}
+#chat-content .left-content .Lsender-head{
+	width:70px;
+	height:80px;
+	float:left;
+	display:inline-block;
+	position:relative;
+}
+#chat-content .left-content .Lsender-head img{
+	width:50px;
+	height:50px;
+	border-radius:50px;
+	float:left;
+	margin:5px 5px;
+}
+#chat-content .left-content .Lsender-head p{
+	font-size:14px;
+	font-weight:bold;
+	position:absolute;
+	width:80px;
+	height:20px;
+	text-align:center;
+	left:-12px;
+	bottom:0px;
+}
+.Lcontent::before{  
+    position:absolute;  
+    content:"\00a0";  
+	display:inline-block;
+    width:0px;  
+    height:0px;  
+    border-width:8px 18px 8px 0;  
+    border-style:solid;  
+    border-color:transparent rgba(166, 218,220,0.5) transparent transparent;  
+    top:19px;  
+    left:82px;  
+}  
+.Rcontent::before{  
+    position:absolute;  
+    content:"\00a0";  
+    display:inline-block; 
+    width:0px;  
+    height:0px;  
+    border-width:8px 0px 8px 18px;  
+    border-style:solid;  
+    border-color:transparent transparent transparent rgba(166, 218,220,0.5);  
+    right:82px;  
+    top:19px;                  
+}  
+#chat-content .left-content .Lcontent{
+	display:inline-block;
+	clear:both;
+	margin-left:30px;
+	max-width:350px;
+	font-size:18px;
+	line-height:30px;
+	border-radius:10px;
+	-webkit-border-radius:10px;  
+    -moz-border-radius:10px;
+	background-color:rgba(166, 218,220,0.5);
+	-moz-box-shadow:1px 1px 2px hsla(0, 0%, 0%, 0.3);  
+	-webkit-box-shadow:1px 1px 2px hsla(0, 0%, 0%, 0.3);
+	box-shadow:1px 1px 2px hsla(0, 0%, 0%, 0.3);  
+	margin-top:10px;
+	
+}
+#chat-content .left-content .Lcontent:hover{  
+    top:-2px;  
+    left:-2px;  
+    -moz-box-shadow:3px 3px 2px hsla(0, 0%, 0%, 0.3);  
+    -webkit-box-shadow:3px 3px 2px hsla(0, 0%, 0%, 0.3);  
+    box-shadow:3px 3px 2x hsla(0, 0%, 0%, 0.3);                     
+}  
+#chat-content .right-content{
+	width:600px;
+	margin:15px 15px 15px 0px;
+	position:relative;
+	float:right;
+}
+#chat-content .right-content .Rsender-head{
+	width:70px;
+	height:80px;
+	float:right;
+	position:relative;
+	display:inline-block;
+}
+#chat-content .right-content .Rsender-head img{
+	width:50px;
+	height:50px;
+	border-radius:50px;
+	float:right;
+	margin:5px 5px;
+}
+#chat-content .right-content .Rsender-head p{
+	font-size:14px;
+	font-weight:bold;
+	position:absolute;
+	width:80px;
+	height:20px;
+	text-align:center;
+	left:0px;
+	bottom:0px;
+}
+#chat-content .right-content .Rcontent{
+	display:inline-block;
+	float:right;
+	margin-right:31px;
+	max-width:350px;
+	font-size:18px;
+	line-height:30px;
+	border-radius:8px;
+	-webkit-border-radius:10px;  
+    -moz-border-radius:10px;
+	background-color:rgba(166, 218,220,0.5);
+	-moz-box-shadow:1px 1px 2px hsla(0, 0%, 0%, 0.3);  
+	-webkit-box-shadow:1px 1px 2px hsla(0, 0%, 0%, 0.3);  
+	box-shadow:1px 1px 2px hsla(0, 0%, 0%, 0.3);  
+	margin-top:10px;
+
+}
+#chat-content .right-content .Rcontent:hover{  
+    top:-2px;  
+    left:-2px;  
+    -moz-box-shadow:3px 3px 2px hsla(0, 0%, 0%, 0.3);  
+    -webkit-box-shadow:3px 3px 2px hsla(0, 0%, 0%, 0.3);  
+    box-shadow:3px 3px 2x hsla(0, 0%, 0%, 0.3);                     
+}  
+#chat-content .cmt-box{
+	max-width:350px;
+	max-height:100px;
+}
+#chat-box{
+	width:602px;
+	height:140px;
+	margin:0 auto;
+	margin-top:-1px;
+}
+#chat-box .Inputbox{
+	width:100%;
+	height:102px;
+}
+#chat-box .Inputbox .comment-text{
+	width:580px;
+	height:90px;
+	color: #999;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	border: 1px solid #99cc66;
+	resize:none;
+	padding:5px 10px;
+	outline:none;
+}
+#chat-box .toolsbox{
+	width:600px;
+	height:30px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 1px solid #99cc66;
+	margin-top:4px;'
+	position:relative;
+	background:white;
+}
+#chat-box .toolsbox .operator-box-btn{
+	width: 85%;
+	height: 30px;
+	float: left;
+}
+#chat-box .toolsbox .operator-box-btn .face-icon{
+	display: block;
+	float: left;
+	margin-top:-1px;
+	margin-left: 10px;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	color: #99cc66;
+	cursor: pointer;
+}
+#chat-box .toolsbox .submit-btn{
+	width: 75px;
+	height: 30px;
+	float: right;
+	position:absolute;
+	right:35px;
+	bottom:-18px;
+}
+#chat-box .toolsbox .submit-btn input{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: #99cc66;
+	transition:1s;
+}
+#chat-box .toolsbox .submit-btn input:hover{
+	background-color:#375f0f;
+}
+#chat-box .toolsbox .submit-btn input:focus{
+	background-color: #99cc66;
+	transition:.2s;
+}

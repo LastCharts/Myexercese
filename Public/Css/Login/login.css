@@ -1,0 +1,265 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textare,p{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background:url("../../Image/background/login.jpg") no-repeat;
+	background-size:100%;
+}
+h1 { 
+	font-size:24px;
+}
+p { 
+	word-wrap: break-word;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+.ui-tooltip{
+	color:red;
+}
+#login{
+	width:400px;
+	height:297px;
+	border:1px #ccc solid;
+	border-radius:6px;
+	position:relative;
+	margin:0 auto;
+	margin-top:150px;
+	background-color:#eee;
+}
+#login #owl-login{
+	width: 211px;
+	height: 108px;
+	background-image: url("../../Image/owl-login.png");
+	position: absolute;
+	top: -100px;
+	left: 50%;
+	margin-left: -111px;
+}
+#login #owl-login .hand{
+	width: 34px;
+	height: 34px;
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
+	background-color: #472d20;
+	-webkit-transform: scaleY(0.6);
+	-moz-transform: scaleY(0.6);
+	-o-transform: scaleY(0.6);
+	-ms-transform: scaleY(0.6);
+	transform: scaleY(0.6);
+	-webkit-transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-o-transition: 0.3s ease-out;
+	-ms-transition: 0.3s ease-out;
+	transition: 0.3s ease-out;
+	position: absolute;
+	left: 14px;
+	bottom: -8px;
+}
+#login #owl-login .hand-r{
+	left: 170px;
+}
+#login #owl-login.trigger .hand{
+  -webkit-transform: translateX(42px) translateY(-15px) scale(0.7);
+  -moz-transform: translateX(42px) translateY(-15px) scale(0.7);
+  -o-transform: translateX(42px) translateY(-15px) scale(0.7);
+  -ms-transform: translateX(42px) translateY(-15px) scale(0.7);
+  transform: translateX(42px) translateY(-15px) scale(0.7);
+}
+#login #owl-login.trigger .hand.hand-r{
+  -webkit-transform: translateX(-42px) translateY(-15px) scale(0.7);
+  -moz-transform: translateX(-42px) translateY(-15px) scale(0.7);
+  -o-transform: translateX(-42px) translateY(-15px) scale(0.7);
+  -ms-transform: translateX(-42px) translateY(-15px) scale(0.7);
+  transform: translateX(-42px) translateY(-15px) scale(0.7);
+}
+#login #owl-login .arms{
+	top: 58px;
+	position: absolute;
+	width: 100%;
+	height: 41px;
+	overflow: hidden;
+}
+#login #owl-login .arms .arm{
+	width: 40px;
+	height: 65px;
+	position: absolute;
+	left: 20px;
+	top: 40px;
+	background-image: url("../../Image/owl-login-arm.png");
+	-webkit-transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-o-transition: 0.3s ease-out;
+	-ms-transition: 0.3s ease-out;
+	transition: 0.3s ease-out;
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	-o-transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+#login #owl-login .arms .arm-r{
+	-webkit-transform: rotate(20deg) scaleX(-1);
+	-moz-transform: rotate(20deg) scaleX(-1);
+	-o-transform: rotate(20deg) scaleX(-1);
+	-ms-transform: rotate(20deg) scaleX(-1);
+	transform: rotate(20deg) scaleX(-1);
+	left: 158px;
+}
+#login #owl-login.trigger .arms .arm{
+  -webkit-transform: translateY(-40px) translateX(40px);
+  -moz-transform: translateY(-40px) translateX(40px);
+  -o-transform: translateY(-40px) translateX(40px);
+  -ms-transform: translateY(-40px) translateX(40px);
+  transform: translateY(-40px) translateX(40px);
+}
+#login #owl-login.trigger .arms .arm.arm-r{
+  -webkit-transform: translateY(-40px) translateX(-40px) scaleX(-1);
+  -moz-transform: translateY(-40px) translateX(-40px) scaleX(-1);
+  -o-transform: translateY(-40px) translateX(-40px) scaleX(-1);
+  -ms-transform: translateY(-40px) translateX(-40px) scaleX(-1);
+  transform: translateY(-40px) translateX(-40px) scaleX(-1);
+}
+#login .input-box{
+	width:300px;
+	height:150px;
+	margin-top:50px;
+	position:relative;
+	top:0;
+	left:45px;
+}
+#login .input-box .username,.password{
+	width:300px;
+	height:40px;
+	border:1px green solid;
+	margin-top:10px;
+}
+#login .input-box .verify{
+	width:200px;
+	height:40px;
+	border:1px green solid;
+	margin-top:10px;
+}
+#login .input-box .username .pic1{
+	width:20px;
+	height:20px;
+	background:url("../../Image/user.png");
+	background-size:20px 20px;
+	position:absolute;
+	top:10px;
+	left:10px;
+}
+#login .input-box .password .pic2{
+	width:20px;
+	height:20px;
+	background:url("../../Image/password.png");
+	background-size:20px 20px;
+	position:absolute;
+	top:60px;
+	left:10px;
+}
+#login .input-box .username input, .password input{
+	border:none;
+	margin:0;
+	width:300px;
+	height:40px;
+	box-sizing:border-box;
+	padding: 10px 5px 10px 40px;
+}
+#login .input-box .verify input{
+	border:none;
+	margin:0;
+	width:200px;
+	height:40px;
+	box-sizing:border-box;
+	padding: 10px 5px 10px 40px;
+}
+#login .input-box .verify img{
+	display:inline-block;
+	position:absolute;
+	top:105px;
+	right:0;
+	border:1px #a59191 solid;
+	cursor:pointer;
+}
+#login .input-box .verify .pic3{
+	width:20px;
+	height:20px;
+	background:url("../../Image/verify.png");
+	background-size:20px 20px;
+	position:absolute;
+	top:115px;
+	left:10px;
+}
+#login .mainbody .form-actions {
+  border-top: 1px solid #e4e4e4;
+  background-color: #f7f7f7;
+  margin-top:30px;
+  padding: 15px 30px;
+  text-align: right;
+}
+#login .mainbody .form-actions .btn{
+	box-sizing:border-box;
+	width:60px;
+	height:35px;
+	display:inline-block;
+	padding:6px 12px;
+	margin-bottom:0px;
+	font-size:14px;
+	cursor:pointer;
+}
+#login .mainbody .form-actions .btn-login{
+	background-color:#1a8fb4;
+	border-color:#357ebd;
+	color:#ffffff;
+	border:1px solid transparent;
+	border-radius:4PX;
+	transition:1s;
+}
+#login .mainbody .form-actions .btn-login:hover{
+	background-color:#1a5163;
+	color:#b5b5b5;
+}
+#login .mainbody .form-actions .btn-login:active{
+	background-color:#1a8fb4;
+	color:#ffffff;
+	transition:.2s;
+}
+#login .mainbody .form-actions .btn-noLogin{
+	width:120px;
+	background-color:#1a8fb4;
+	border-color:#357ebd;
+	color:#ffffff;
+	border:1px solid transparent;
+	border-radius:4PX;
+	float:left;
+	transition:1s;
+}
+#login .mainbody .form-actions .btn-noLogin:hover{
+	background-color:#1a5163;
+	color:#b5b5b5;
+}
+#login .mainbody .form-actions .btn-noLogin:active{
+	background-color:#1a8fb4;
+	color:#ffffff;
+	transition:.2s;
+}
+#login .mainbody .form-actions .register{
+	display:inline-block;
+	color:#ccc;
+	transition:1s;
+	margin-right:20px;
+}
+#login .mainbody .form-actions .register:hover{
+	color:#1a8fb4;
+}
+#login .mainbody .form-actions .register:active{
+	color:#010008;
+	transition:.2s;
+}

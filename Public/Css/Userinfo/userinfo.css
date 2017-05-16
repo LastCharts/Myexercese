@@ -1,0 +1,526 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textare,p{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background:url("../../Image/background/user-bk.jpg") no-repeat;
+	background-size:100%;
+}
+h1 { 
+	font-size:24px;
+}
+p { 
+	word-wrap: break-word;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#nav{
+	display:inline-block;
+	width:580px;
+	height:60px;
+}
+header {
+	width: 100%; 
+	background: #666; 
+	height: 60px; 
+	border-bottom: #464647 1px solid;
+	text-align:center;
+}
+
+nav ul li{
+	display:inline;
+	line-height:40px;
+}
+nav ul li a{
+	color:#EAE9E9;
+	display:block;
+	float:left;
+	padding:10px;
+	margin-right:5px;
+}
+nav ul li a:hover{
+	color:black;
+	text-decoration:none;
+	background:#eee;
+	border-radius:6px;
+}
+.login{
+	display:inline-block;
+	float:right;
+}
+.login a{
+	color:#EAE9E9;
+	position:relative;
+	top:20px;
+	right:30px;
+}
+#loading{
+	background:url(../../Image/loading.gif) no-repeat;
+	background-size:80px 85px;
+	background-position:100px -20px;
+	line-height:25px;
+	font-size:16px;
+	text-indent:5px;
+	color:black;
+}
+#success,#default,#quit{
+	text-indent:5px;
+}
+form input{
+	width:150px;
+	height:20px;
+	text-indent:5px;
+	margin-top:5px;
+	margin-left:5px;
+	font-size:13px;
+	background:#fff;
+	color:#666;
+	border-radius:4px;
+}
+form img{
+	cursor:pointer;
+}
+form #img1{
+	position:relative;
+	top:7px;
+}
+.ui-tooltip{
+	color:red;
+}
+#mainbody{
+	width: 1200px;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius:6px;
+}
+aside{
+	width: 150px;
+	float: left;
+	border-radius:6px;
+	border:black 1px solid;
+}
+#choose li{
+	font-size:16px;
+	line-height:28px;
+	color:#000000;
+}
+#choose li:nth-child(-n+7){
+	border-bottom:black 1px solid;
+}
+#choose li span{
+	display:block;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	color:#3A3838;
+}
+#choose li span:hover{
+	color:#2F8A18;
+	cursor:pointer;
+	background: rgba(0, 0, 0, .1);
+	border-left:#2F8A18 6px solid;
+	transition: .5s;
+}
+.labelsize{
+	width:30px;
+	height:30px;
+}
+.navlabel{
+	background:url("../../Image/remind.png");
+	background-size:30px 30px;
+	position:absolute;
+	top:333px;
+	left:182px;
+	display:none;
+}
+#show{
+	width: 1000px;
+	border-radius:4px;
+	float:right;
+}
+#message{
+	background:url("../../Image/background/userinfo.jpg");
+	background-size:100%;
+}
+#show #userinfo{
+	width:800px;
+	height:464px;
+	border-radius:5px;
+	margin:0 auto;
+	position: relative;
+	margin-top:50px;
+	border: 1px solid #e4e4e4;
+	background-color:white;
+	opacity:.9;
+}
+#show #userinfo .poname{
+	width:300px;
+	height:100px;
+}
+#show #userinfo .poname img{
+	width:100px;
+	height:100px;
+	border-radius:80px;
+	border:1px #5a5a5a solid;
+}
+#show #userinfo .lablesize{
+	width:20px;
+	height:20px;
+}
+#show #userinfo .poname .lablepic{
+	background:url("../../Image/user.png");
+	background-size:20px 20px;
+	position:absolute;
+	top:57px;
+	left:140px;
+}
+#show #userinfo .poname span{
+	font-size:20px;
+	position:absolute;
+	top:56px;
+	left:166px
+}
+#show #userinfo .age{
+	width:300px;
+	height:40px;
+	border:1px green solid;
+	margin-top:50px;
+}
+#show #userinfo .age input{
+	border:none;
+	margin:0;
+	width:300px;
+	height:40px;
+	box-sizing:border-box;
+	padding: 10px 5px 10px 40px;
+	font-size:18px;
+	color:#000000;
+}
+#show #userinfo .age .agepic{
+	background:url("../../Image/age.png");
+	background-size:20px 20px;
+	position:absolute;
+	top:176px;
+	left:30px;
+}
+#show #userinfo .sex{
+	width:300px;
+	height:40px;
+	margin-top:10px;
+}
+#show #userinfo .sex span{
+	display:inline-block;
+	margin-left:44px;
+	margin-right:40px;
+	font-size:20px;
+}
+#show #userinfo .sex label{
+	padding-left:30px;
+}
+#show #userinfo .birthday, .mail, .phonenum{
+	width:300px;
+	height:40px;
+	border:1px green solid;
+	margin-top:10px;
+}
+#show #userinfo .birthday input, .mail input, .phonenum input{
+	border:none;
+	margin:0;
+	width:300px;
+	height:40px;
+	box-sizing:border-box;
+	padding: 10px 5px 10px 40px;
+	font-size:18px;
+	color:#000000;
+}
+#show #userinfo .birthday .birthdaypic{
+	background:url("../../Image/birthday.png");
+	background-size:20px 20px;
+	position:absolute;
+	top:276px;
+	left:32px;
+}
+#show #userinfo .mail .mailpic{
+	background:url("../../Image/mail.png");
+	background-size:20px 20px;
+	position:absolute;
+	top:328px;
+	left:32px;
+}
+#show #userinfo .phonenum .phonepic{
+	background:url("../../Image/phone.png");
+	background-size:20px 20px;
+	position:absolute;
+	top:382px;
+	left:32px;
+}
+#show .btn-operation{
+	height:40px;
+	width:740px;
+	border-top: 1px solid #e4e4e4;
+	background-color: #f7f7f7;
+	margin-top:10px;
+	padding:15px 30px;
+	text-align:right;
+}
+#show .btn-operation .btn{
+	box-sizing:border-box;
+	width:60px;
+	height:35px;
+	display:inline-block;
+	padding:6px 12px;
+	margin-bottom:0px;
+	margin-left:20px;
+	font-size:14px;
+	cursor:pointer;
+	background-color:#1a8fb4;
+	border-color:#357ebd;
+	color:#ffffff;
+	border:1px solid transparent;
+	border-radius:6PX;
+	transition:1s;
+}
+#show .btn-operation .btn:hover{
+	background-color:#1a5163;
+	color:#b5b5b5;
+}
+#show .btn-operation .btn:active{
+	background-color:#1a8fb4;
+	color:#ffffff;
+	transition:.2s;
+}
+
+#show #usersign{
+	width:800px;
+	height:500px;
+	border:1px #e4e4e4 solid;
+	border-radius:6px;
+	box-shadow:0 0 5px #888888;
+	margin:0 auto;
+	margin-top:50px;
+	position:relative;
+	background-color:white;
+	opacity:.9;
+}
+#show #usersign .desclabel, .signlabel{
+	width:80px;
+	height:80px;
+	border:1px #e4e4e4 solid;
+	border-radius:50%;
+	position:absolute;
+	top:5px;
+	left:-20px;
+	overflow:hidden;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#e8c854)); 
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#fff,endColorStr=e8c854); 
+	background: -ms-linear-gradient(top, #fff,  #e8c854);
+	background:-moz-linear-gradient(top,#fff,#e8c854);
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#fff), to(#e8c854));
+	background: -o-linear-gradient(top, #fff, #e8c854); 
+	background: -webkit-linear-gradient(top, #fff, #e8c854);
+	-moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+	box-shadow: 5px 5px 5px #888888;
+}
+#show #usersign .signlabel{
+	top:180px;
+	left:-20px;
+}
+#show #usersign .desclabel span, .signlabel span{
+	display:inline-block;
+	font-weight:600;
+	width:75px;
+	line-height:80px;
+	box-sizing:border-box;
+	padding-left:6px;
+}
+#show #usersign .Lsize{
+	width:30px;
+	height:30px;
+}
+#show #usersign .desclabel .descpic{
+	background:url("../../Image/userdesc.png");
+	background-size:30px 30px;
+	position:absolute;
+	top:5px;
+	left:24px;
+}
+#show #usersign .signlabel .signpic{
+	background:url("../../Image/sign.png");
+	background-size:30px 30px;
+	position:absolute;
+	top:5px;
+	left:26px;
+}
+#show #usersign .userdesc, .sign{
+	width:500px;
+	height:100px;
+	border:1px #eee solid;
+	border-radius:6px;
+	border-width:1px;
+	margin-top:20px;
+	margin-left:50px;
+	transition:1s;
+}
+#show #usersign .sign{
+	height:150px;
+	margin-top:80px;
+}
+#show #usersign .userdesc textarea, .sign textarea{
+	border:none;
+	margin:0;
+	padding:0;
+	outline:none;
+	width:500px;
+	height:100px;
+	font-size:16px;
+	box-sizing:border-box;
+	padding:6px 12px;
+	border-radius:6px;
+	resize:none;
+}
+#show #usersign .userdesc:hover, .sign:hover{
+	border:1px #adacac solid;
+	transition:1s;
+}
+#show #usersign .userdesc textarea:focus, .sign textarea:focus{
+	border:1px rgba(217,129,0,0.7) solid;
+	box-shadow: 0 0 8px rgba(217,129,0,0.7);
+}
+#show #usersign .sign textarea{
+	height:150px;
+}
+
+
+#show #message #Pic{
+	width:655px;
+	background:white;
+	border: 1px solid #111;
+	margin-left:50px;
+	margin-top:30px;
+	border-radius:4px;
+	display:block;
+	zoom:1;
+	overflow:hidden;
+}
+#show #message #Pic .now-Pic{
+	width:200px;
+	height:200px;
+	position:relative;
+	float:left;
+	text-align:center;
+}
+#show #message #Pic .now-Pic .now-Pic-label{
+	width:20px;
+	height:20px;
+	background:url("../../Image/user.png");
+	background-size:20px 20px;
+	position:absolute;
+	top:147px;
+	left:90px;
+}
+#show #message #Pic .now-Pic span{
+	display:inline-block;
+	width:200px;
+	height:30px;	
+	font-size:20px;
+	position:absolute;
+	top:166px;
+	left:0px;
+}
+#show #message #Pic .now-Pic img{
+	width:140px;
+	height:140px;
+	border-radius: 140px;
+	box-shadow:2px 2px 5px #868686;
+	-moz-border-radius: 140px;
+	-webkit-border-radius: 140px;
+}
+#show #message .upload{
+	width:200px;
+	height:200px;
+	background:url('../../Image/add_picture.png') no-repeat;
+	background-size:140px 140px;
+	background-position:center;
+	display:inline-block;
+	float:left;
+	font-size:14px;
+	text-align:center;
+	transition-duration:1s;
+}
+#show #message .upload:hover{
+	opacity:.5;
+}
+#show #message .upload:active{
+	opacity:1;
+	transition:.3s;
+}
+#show #message .upload span{
+	font-family:"黑体";
+	display:inline-block;
+	width:200px;
+	height:30px;
+	font-size:20px;
+}
+#show #message .hidden{
+	margin:0;
+	width:140px;
+	height:140px;
+	display:inline-block;
+	opacity:0;
+	cursor:pointer;
+}
+#show #message #Pic .Pre-box{
+	text-align:center;
+	overflow:hidden;
+	width:250px;
+	height:500px;
+	margin:0;
+	border:1px #eee solid;
+	border-radius:4px;
+	box-shadow:0 0 5px #888888;
+}
+#show #message #Pic .Pre-box span{
+	font-family:"黑体";
+	display:inline-block;
+	width:250px;
+	height:30px;
+	font-size:20px;
+}
+#show #message #Pic .Pre-box img{
+	max-width:250px;
+	max-height:400px;
+	width:expression(document.body.clientWidth > 250? "250px": "auto" );
+	display:inline-block;
+	border-radius:4px;
+}
+#show #message #Pic .submit{
+	box-sizing:border-box;
+	width:90px;
+	height:35px;
+	display:inline-block;
+	padding:6px 12px;
+	margin-top:20px;
+	font-size:14px;
+	cursor:pointer;
+	background-color:#1a8fb4;
+	border-color:#357ebd;
+	color:#ffffff;
+	border:1px solid transparent;
+	border-radius:6PX;
+	transition:1s;
+}
+#show #message #Pic .submit:hover{
+	background-color:#1a5163;
+	color:#b5b5b5;
+}
+#show #message #Pic .submit:active{
+	background-color:#1a8fb4;
+	color:#ffffff;
+	transition:.2s;
+}

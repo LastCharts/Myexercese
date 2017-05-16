@@ -1,0 +1,369 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textare,p{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background:url("../../Image/background/user-bk.jpg") no-repeat;
+	background-size:100%;
+}
+h1 { 
+	font-size:24px;
+}
+p { 
+	word-wrap: break-word;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#nav{
+	display:inline-block;
+	width:580px;
+	height:60px;
+}
+header {
+	width: 100%; 
+	background: #666; 
+	height: 60px; 
+	border-bottom: #464647 1px solid;
+	text-align:center;
+}
+
+nav ul li{
+	display:inline;
+	line-height:40px;
+}
+nav ul li a{
+	color:#EAE9E9;
+	display:block;
+	float:left;
+	padding:10px;
+	margin-right:5px;
+}
+nav ul li a:hover{
+	color:black;
+	text-decoration:none;
+	background:#eee;
+	border-radius:6px;
+}
+.login{
+	display:inline-block;
+	float:right;
+}
+.login a{
+	color:#EAE9E9;
+	position:relative;
+	top:20px;
+	right:30px;
+}
+#loading{
+	background:url(../../Image/loading.gif) no-repeat;
+	background-size:80px 85px;
+	background-position:100px -20px;
+	line-height:25px;
+	font-size:16px;
+	text-indent:5px;
+	color:black;
+}
+#success,#default,#quit{
+	text-indent:5px;
+}
+form input{
+	width:150px;
+	height:20px;
+	text-indent:5px;
+	margin-top:5px;
+	margin-left:5px;
+	font-size:13px;
+	background:#fff;
+	color:#666;
+	border-radius:4px;
+}
+form img{
+	cursor:pointer;
+}
+form #img1{
+	position:relative;
+	top:7px;
+}
+#mainbody{
+	width: 1200px;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius:6px;
+}
+aside{
+	width: 150px;
+	float: left;
+	border-radius:6px;
+	border:black 1px solid;
+}
+#choose{
+	position:relative;
+}
+#choose li{
+	font-size:16px;
+	line-height:28px;
+	color:black;
+}
+#choose li:nth-child(-n+7){
+	border-bottom:black 1px solid;
+}
+#choose li span{
+	display:block;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	color:#3A3838;
+}
+#choose li span:hover{
+	color:#2F8A18;
+	cursor:pointer;
+	background: rgba(0, 0, 0, .1);
+	border-left:#2F8A18 6px solid;
+	transition: .5s;
+}
+#tabs{
+	width:750px;
+	height:450px;
+	float:left;
+	border-radius:6px;
+	margin-left:50px;
+	margin-bottom:50px;
+	position:relative;
+	overflow :auto;
+}
+.labelsize{
+	width:30px;
+	height:30px;
+}
+.navlabel{
+	background:url("../../Image/remind.png");
+	background-size:30px 30px;
+	position:absolute;
+	top:253px;
+	left:108px;
+	display:none;
+}
+#tabs .remindlabel{
+	background:url("../../Image/remind.png");
+	background-size:30px 30px;
+	position:absolute;
+	top:5px;
+	left:0px;
+	display:none;
+}
+#tabs .remindlabel2{
+	background:url("../../Image/remind.png");
+	background-size:30px 30px;
+	position:absolute;
+	top:5px;
+	left:105px;
+	display:none;
+}
+#tabs .remindlabel3{
+	background:url("../../Image/remind.png");
+	background-size:30px 30px;
+	position:absolute;
+	top:5px;
+	left:205px;
+	display:none;
+}
+#Addmessage .Messbody{
+	width:500px;
+	height:70px;
+	border:1px black solid;
+	border-radius:6px;
+	overflow:hidden;
+	margin:10px auto;
+}
+#Addmessage .Messbody .head{
+	width:50px;
+	height:50px;
+	margin-left:10px;
+	margin-top:10px;
+	box-sizing:border-box;
+	float:left;
+}
+#Addmessage .Messbody .head img{
+	width:50px;
+	height:50px;
+	border-radius:50px;
+	border:1px #eee soild;
+	box-shadow: 0 0 5px #888888;
+}
+#Addmessage .Messbody .infobody{
+	width:280px;
+	height:70px;
+	float:left;
+}
+#Addmessage .Messbody .infobody span{
+	font-weight:600;
+	font-size:18px;
+	display:block;
+	margin:5px 0 0 20px;
+}
+#Addmessage .Messbody .infobody p{
+	display:inline-block;
+	margin:5px 0 0 20px;
+	color:#6f6a6a;
+}
+#Addmessage .Messbody .button{
+	width:140px;
+	line-height:70px;
+	float:left;
+}
+#Addmessage .Messbody .button button{
+	width:60px;
+	height:30px;
+	border-radius:6px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: #99cc66
+}
+#Addmessage .Messbody .button button:hover{
+	opacity:.8;
+}
+#Result .RefuseMess{
+	width:500px;
+	height:70px;
+	border:1px black solid;
+	border-radius:6px;
+	overflow:hidden;
+	margin:10px auto;
+}
+#Result .RefuseMess .head2{
+	width:50px;
+	height:50px;
+	margin-left:10px;
+	margin-top:10px;
+	box-sizing:border-box;
+	float:left;
+}
+#Result .RefuseMess .head2 img{
+	width:50px;
+	height:50px;
+	border-radius:50px;
+	border:1px #eee soild;
+	box-shadow: 0 0 5px #888888;
+}
+#Result .RefuseMess .infobody2{
+	width:280px;
+	height:70px;
+	float:left;
+}
+#Result .RefuseMess .infobody2 span{
+	font-weight:600;
+	font-size:18px;
+	display:block;
+	margin:5px 0 0 20px;
+}
+#Result .RefuseMess .infobody2 p{
+	display:inline-block;
+	margin:5px 0 0 20px;
+	color:#6f6a6a;
+}
+#Result .RefuseMess .button2{
+	width:140px;
+	height:70px;
+	box-sizing:border-box;
+	padding:20px 20px;
+	float:left;
+}
+#Result .RefuseMess .button2 button{
+	width:100px;
+	height:30px;
+	border-radius:6px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: #99cc66
+}
+#Result .RefuseMess .button2 button:hover{
+	opacity:.8;
+}
+#LoveMess .upload{
+	width:500px;
+	height:70px;
+	border:1px black solid;
+	border-radius:6px;
+	overflow:hidden;
+	margin:10px auto;
+}
+#LoveMess .upload .head3{
+	width:50px;
+	height:50px;
+	margin-left:10px;
+	margin-top:10px;
+	box-sizing:border-box;
+	float:left;
+}
+#LoveMess .upload .head3 img{
+	width:50px;
+	height:50px;
+	border-radius:50px;
+	border:1px #eee soild;
+	box-shadow: 0 0 5px #888888;
+}
+#LoveMess .upload .infobody3{
+	width:280px;
+	height:70px;
+	float:left;
+}
+#LoveMess .upload .infobody3 span{
+	font-weight:600;
+	font-size:18px;
+	display:block;
+	margin:5px 0 0 20px;
+}
+#LoveMess .upload .infobody3 p{
+	height:25px;
+	width:230px;
+	display:inline-block;
+	margin:5px 0 0 20px;
+	color:#6f6a6a;
+	word-break:keep-all;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#LoveMess .upload .button3{
+	width:140px;
+	height:70px;
+	box-sizing:border-box;
+	padding:20px 20px;
+	float:left;
+}
+#LoveMess .upload .button3 button{
+	width:100px;
+	height:30px;
+	border-radius:6px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: #99cc66
+}
+#LoveMess .upload .button3 button:hover{
+	opacity:.8;
+}
+#handle{
+	background:url(../../Image/loading.gif) no-repeat;
+	background-size:80px 85px;
+	background-position:70px -20px;
+	line-height:25px;
+	font-size:16px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>好友列表</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Friend/friend.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Page/page.css" />
+<link href="__PUBLIC__/Css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-ui.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/modernizr.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/head.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/common.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Common/leftnav.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Friend/friend.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/Friend/chat.js"></script>
+
+</head>
+
+<body>
+
+    <include file="Public:head" />
+	
+	<input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>" />
+	<input type="hidden" name="username" value="<?php echo $_SESSION['username'] ?>" />
+	
+	<div id="mainbody">
+		<include file="Public:leftnav" />
+		<img src="{$result['pic']}" />
+		
+		<div id="frinedlist">
+			<div class="friend">			
+					<h3>全部好友</h3>
+					<div class="allfriend">
+						<volist name="result" id="vo" empty="暂无好友(￣︶￣)">
+							<input type="hidden" name="popic" value="{$vo['pic']}"  />
+							<div class="member">
+								<div class="head-pic">
+									<img src="{$vo['friendpic']}" />
+								</div>
+								<div class="info">
+									<span class="user" name="{$vo['friendname']}">{$vo['friendname']}</span>
+									<p><a href="/blog/index.php/Home/Index/index?id={$vo['fid']}" target="_blank" >访问博客</a><span class="Dltfriend" >[删除]</span></p>							
+								</div>
+								<input type="hidden" name="fid" value="{$vo['fid']}" />
+							</div>
+						</volist>
+					</div>
+					
+					
+					<h3>在线</h3>
+					<div class="online">
+						<volist name="result" id="vo">
+							<if condition = "$vo['f_online'] eq 1 ">
+								<div class="member">
+									<div class="head-pic">
+										<img src="{$vo[friendpic]}" />
+									</div>
+									<div class="info">
+										<span class="user" name="{$vo['friendname']}">{$vo['friendname']}</span>
+										<p><a href="/blog/index.php/Home/Index/index?id={$vo['fid']}" target="_blank" >访问博客</a><span class="Dltfriend" >[删除]</span></p>							
+									</div>
+									<input type="hidden" name="fid" value="{$vo['fid']}" />
+								</div>
+							<else/>	
+							</if>	
+						</volist>
+					</div>
+					
+					<h3>离线</h3>
+					<div class="outline">
+						<volist name="result" id="vo">
+							<if condition = "$vo['f_online'] eq 0 ">
+								<div class="member">
+									<div class="head-pic">
+										<img src="{$vo['friendpic']}" />
+									</div>
+									<div class="info">
+										<span class="user" name="{$vo['friendname']}">{$vo['friendname']}</span>
+										<p><a href="/blog/index.php/Home/Index/index?id={$vo['fid']}" target="_blank"  >访问博客</a><span class="Dltfriend" >[删除]</span></p>							
+									</div>
+									<input type="hidden" name="fid" value="{$vo['fid']}" />
+								</div>
+							<else/>	
+							</if>	
+						</volist>
+					</div>
+			</div>
+			
+			<div class="chatlist">
+				<div class="mess">
+					<p></p>
+				</div>
+				
+				<div id="chat-content">
+						
+
+				</div>
+			
+			
+				<div id="chat-box">
+						<div class="Inputbox">
+							<textarea name="content" class="comment-text" placeholder="请输入..."></textarea>
+						</div>
+						<input type="hidden" name="sender" value="<?php echo $_SESSION['username'] ?>" />	<!-- 代表当前用户的username -->
+						<input type="hidden" name="receiver" value="" /> 	<!-- 代表与之聊天的用户的username -->
+						<div class="toolsbox">
+							<div class="operator-box-btn"><span class="face-icon" >😚</span></div>
+							<div class="submit-btn"><input type="button" name="button" value="发送" /></div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div>
+		
+	</div>
+	
+</body>
+<!--
+<div class="left-content">
+						<div class="Lsender-head">
+							<img src="__PUBLIC__/Image/Pic/head-face.jpg" />
+							<p>admin</p>
+						</div>
+						<div class="Lcontent">
+							<p class="cmt-box" style="padding-left:10px;letter-spacing:1px;">我们结婚吧我们结婚吧我们结婚吧我们结婚吧我们结婚吧</p>
+						</div>
+					</div>
+					
+					<div class="right-content">
+						<div class="Rsender-head">
+							<img src="" />
+							<p>Charlotte</p>
+						</div>
+						<div class="Rcontent">
+							<p class="cmt-box" style="padding-left:10px;letter-spacing:1px;">我们结婚吧我们结婚吧我们结婚吧我们结婚吧我们结婚吧</p>
+						</div>
+					</div>
+-->
+
+
+</html>
